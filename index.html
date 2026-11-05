@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kettlebite: entrena, come, rinde</title>
+  <meta name="description" content="Ideas claras para entrenar y comer mejor, tanto si empiezas como si ya llevas tiempo en el gimnasio.">
+  <meta name="theme-color" content="#E31B23">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css?v=20261105">
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!(window.__BRAND__ && window.__BRAND__.booted)) document.documentElement.classList.remove("js");
+    }, 4000);
+  </script>
+  <script defer src="lib/gsap.min.js?v=20261105"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
+  <script defer src="lib/manifest.js?v=20261105"></script>
+  <script defer src="main.js?v=20261105"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="#inicio" aria-label="Kettlebite, ir al inicio">
+      <svg class="brand-mark" viewBox="0 0 200 240" aria-hidden="true">
+        <path d="M58 112 C44 40 56 16 100 16 C144 16 156 40 142 112" fill="none" stroke="currentColor" stroke-width="24"/>
+        <path d="M100 88 C84 74 84 50 100 36 C116 50 116 74 100 88 Z" fill="#1FA34A"/>
+        <path d="M100 78 A80 80 0 1 0 170 197 A21 21 0 0 1 168 170 A21 21 0 0 1 169 145 A21 21 0 0 1 169 118 A80 80 0 0 0 100 78 Z" fill="#E31B23"/>
+      </svg>
+      <span>kettlebite</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
+    <nav class="nav-links" id="menu" aria-label="Secciones">
+      <a href="#entrena">Entrena</a>
+      <a href="#come">Come</a>
+      <a href="#entrena-y-come">Entrena y come</a>
+      <a href="#sin-mitos">Sin mitos</a>
+      <a href="#quien">Quién está detrás</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-word">Entrena.</span>
+          <span class="hero-word">Come.</span>
+          <span class="hero-word">Rinde.</span>
+        </h1>
+        <p class="hero-sub">Lo que haces en el gimnasio y lo que pones en el plato van juntos. Aquí te lo contamos sin complicaciones.</p>
+        <a class="btn" href="#entrena">Ver las ideas</a>
+      </div>
+      <figure class="shot shot-hero" style="--blob:#E31B23">
+        <div class="shot-frame">
+          <img src="assets/img/hero.webp" width="1800" height="1200" alt="Kettlebells de competición de varios colores en fila sobre el césped" fetchpriority="high" loading="eager" decoding="sync">
+        </div>
+      </figure>
+    </section>
+
+    <section class="idea">
+      <div class="bites" style="--c:#141414" aria-hidden="true"></div>
+      <div class="wrap idea-inner">
+        <h2 class="reveal">Una sola idea: entrenar y comer son la misma conversación.</h2>
+        <div class="audience">
+          <div class="reveal">
+            <h3>Si estás empezando</h3>
+            <p>Técnica básica, comidas sencillas y los errores que conviene evitar. Sin tecnicismos ni juicios.</p>
+          </div>
+          <div class="reveal">
+            <h3>Si ya llevas tiempo</h3>
+            <p>Variantes de ejercicios, formas de organizar tus comidas y el porqué de cada consejo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillar" id="entrena" style="--from:#FFFFFF;--to:#FDE9E8;--c:#E31B23">
+      <div class="bites" aria-hidden="true"></div>
+      <div class="wrap pillar-inner">
+        <figure class="shot" style="--blob:#E31B23">
+          <div class="shot-frame"><img src="assets/img/entrena.webp" width="1100" height="894" alt="Kettlebell negra sobre el suelo de un gimnasio, con dos personas entrenando al fondo" loading="lazy" decoding="async"></div>
+        </figure>
+        <div class="pillar-text">
+          <h2 class="reveal">Entrena</h2>
+          <h3 class="reveal">Tres errores que frenan tu sentadilla</h3>
+          <ul class="reveal">
+            <li><strong>Levantar los talones.</strong> Mantén todo el pie apoyado.</li>
+            <li><strong>Meter las rodillas hacia dentro.</strong> Llévalas en la línea de los pies.</li>
+            <li><strong>Bajar sin control.</strong> Baja despacio y sube con fuerza.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillar pillar-flip" id="come" style="--from:#FDE9E8;--to:#E3F5E9;--c:#1FA34A">
+      <div class="bites" aria-hidden="true"></div>
+      <div class="wrap pillar-inner">
+        <figure class="shot" style="--blob:#1FA34A">
+          <div class="shot-frame"><img src="assets/img/come.webp" width="1000" height="1334" alt="Tortilla de verduras con tomate en una sartén de hierro" loading="lazy" decoding="async"></div>
+        </figure>
+        <div class="pillar-text">
+          <h2 class="reveal">Come</h2>
+          <h3 class="reveal">Una cena en 10 minutos para después de entrenar</h3>
+          <ol class="reveal">
+            <li>Bate dos o tres huevos.</li>
+            <li>Añade tomate en dados y, si tienes, espinacas.</li>
+            <li>Cuájala en la sartén y acompáñala con pan integral.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillar" id="entrena-y-come" style="--from:#E3F5E9;--to:#FFF5D1;--c:#FFC91F">
+      <div class="bites" aria-hidden="true"></div>
+      <div class="wrap pillar-inner">
+        <figure class="shot" style="--blob:#FFC91F">
+          <div class="shot-frame"><img src="assets/img/antes.webp" width="1000" height="1334" alt="Desayuno con tostada de aguacate y fruta troceada, entre ella plátano" loading="lazy" decoding="async"></div>
+        </figure>
+        <div class="pillar-text">
+          <h2 class="reveal">Entrena y come</h2>
+          <h3 class="reveal">Qué comer antes de entrenar a primera hora</h3>
+          <ul class="reveal">
+            <li><strong>Con poco tiempo:</strong> algo ligero, como un plátano o una tostada.</li>
+            <li><strong>Con más de una hora:</strong> un desayuno algo más completo.</li>
+            <li><strong>Siempre:</strong> prueba qué te sienta mejor, porque cada persona es distinta.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillar pillar-flip" id="sin-mitos" style="--from:#FFF5D1;--to:#E5EBFC;--c:#1746D1">
+      <div class="bites" aria-hidden="true"></div>
+      <div class="wrap pillar-inner">
+        <figure class="shot" style="--blob:#1746D1">
+          <div class="shot-frame"><img src="assets/img/mitos.webp" width="960" height="922" alt="Dos mitades de pomelo sobre una tabla de cortar" loading="lazy" decoding="async"></div>
+        </figure>
+        <div class="pillar-text">
+          <h2 class="reveal">Sin mitos</h2>
+          <h3 class="reveal">¿De verdad hay comidas que queman grasa?</h3>
+          <p class="reveal">No. Ningún alimento quema grasa por sí solo. Lo que cuenta es lo que comes en conjunto y cuánto te mueves.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="who" id="quien">
+      <div class="bites" style="--c:#141414" aria-hidden="true"></div>
+      <div class="wrap who-inner">
+        <h2 class="reveal">Quién está detrás</h2>
+        <p class="reveal">Soy Óscar. Tengo el grado superior en Condicionamiento Físico y Fitness y estudio Ciencias de la Actividad Física y del Deporte. Kettlebite nace para compartir lo que aprendo sobre entrenar y comer bien.</p>
+        <p class="reveal"><strong>No soy nutricionista.</strong> Aquí encontrarás ideas generales, no dietas personalizadas.</p>
+      </div>
+    </section>
+
+    <section class="soon">
+      <div class="bites" style="--c:#E31B23" aria-hidden="true"></div>
+      <div class="wrap soon-inner">
+        <h2 class="reveal">Esto acaba de empezar.</h2>
+        <p class="reveal soon-text">Las próximas ideas llegarán a Instagram.</p>
+        <a class="btn reveal" href="https://www.instagram.com/kettlebite.es/">Seguir en Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">kettlebite</p>
+      <p><a href="https://www.instagram.com/kettlebite.es/">Instagram: @kettlebite.es</a></p>
+      <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
+      <p class="footer-credits">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad y cookies</a>
+        <a href="creditos.html">Créditos fotográficos</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
