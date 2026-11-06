@@ -28,55 +28,37 @@
     $$(".nav-links a", nav).forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
   }
 
-  function initReveals() {
-    var items = $$(".reveal, .shot");
-    if (!("IntersectionObserver" in window)) {
-      items.forEach(function (el) { el.classList.add("is-in"); });
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.01, rootMargin: "0px 0px -6% 0px" });
-    items.forEach(function (el) { io.observe(el); });
-
-    // Red de seguridad: nada visible en pantalla se queda oculto
-    setTimeout(function () {
-      items.forEach(function (el) {
-        if (!el.classList.contains("is-in") && el.getBoundingClientRect().top < window.innerHeight) {
-          el.classList.add("is-in");
-        }
-      });
-    }, 6000);
+  // Dibuja las curvas de una gráfica y, al final, muestra sus etiquetas.
+  // Sin JavaScript o con movimiento reducido, las gráficas ya se ven completas.
+  function chartTimeline(svg, vars) {
+    var tl = gsap.timeline(vars);
+    // autoRound: false porque GSAP redondea los píxeles y la curva saltaría de golpe en vez de dibujarse
+    tl.fromTo($$(".draw", svg), { strokeDashoffset: 1.05 }, { strokeDashoffset: 0, autoRound: false, duration: 1, ease: "none", stagger: 0.08 }, 0);
+    var after = $$(".after", svg);
+    if (after.length) tl.from(after, { opacity: 0, duration: 0.2, ease: "none", stagger: 0.03 }, 0.55);
+    return tl;
   }
 
-  function initHero() {
-    var words = $$(".hero-word");
-    if (!words.length) return;
-    gsap.from(words, { yPercent: 35, opacity: 0, duration: 1.1, ease: "expo.out", stagger: 0.12 });
-    gsap.from(".hero-sub, .hero-text .btn", { y: 18, opacity: 0, duration: 1, ease: "power3.out", delay: 0.35, stagger: 0.1 });
+  // La firma de la web: la curva del hero se dibuja al cargar
+  function initHeroCurve() {
+    var svg = $('[data-chart="load"]');
+    if (svg) chartTimeline(svg, { delay: 0.2, defaults: { ease: "none" } }).duration(2);
   }
 
-  // Firma de la web: las franjas de mordiscos se deslizan al hacer scroll
-  function initBites() {
-    $$(".bites").forEach(function (band, i) {
-      var dir = i % 2 ? -1 : 1;
-      gsap.fromTo(band, { "--bites-x": "0px" }, {
-        "--bites-x": dir * 288 + "px",
-        ease: "none",
-        scrollTrigger: { trigger: band, start: "top bottom", end: "bottom top", scrub: 0.8 }
+  // Las gráficas de los pilares se dibujan al hacer scroll
+  function initScrollCharts() {
+    $$('[data-chart="scroll"]').forEach(function (svg) {
+      chartTimeline(svg, {
+        scrollTrigger: { trigger: svg, start: "top 88%", end: "top 30%", scrub: 0.5 }
       });
     });
   }
 
-  function initParallax() {
-    if (reduced) return;
-    $$(".pillar .shot-frame img").forEach(function (img) {
-      gsap.fromTo(img, { scale: 1.1, yPercent: -3 }, {
-        yPercent: 3,
-        ease: "none",
-        scrollTrigger: { trigger: img.closest(".shot"), start: "top bottom", end: "bottom top", scrub: 0.6 }
+  function initBars() {
+    $$("[data-bars]").forEach(function (fig) {
+      gsap.from($$(".bar", fig), {
+        scaleX: 0, ease: "none", stagger: 0.12,
+        scrollTrigger: { trigger: fig, start: "top 85%", end: "top 40%", scrub: 0.5 }
       });
     });
   }
@@ -84,13 +66,12 @@
   function boot() {
     safe(initNav, "initNav");
     safe(initMenu, "initMenu");
-    safe(initReveals, "initReveals");
 
-    if (window.gsap && window.ScrollTrigger) {
+    if (!reduced && window.gsap && window.ScrollTrigger) {
       try { gsap.registerPlugin(ScrollTrigger); } catch (_) {}
-      safe(initHero, "initHero");
-      safe(initBites, "initBites");
-      safe(initParallax, "initParallax");
+      safe(initHeroCurve, "initHeroCurve");
+      safe(initScrollCharts, "initScrollCharts");
+      safe(initBars, "initBars");
     }
 
     if (window.__BRAND__) window.__BRAND__.booted = true;

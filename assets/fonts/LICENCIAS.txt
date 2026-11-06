@@ -1,3 +1,4 @@
-Anybody: Copyright The Anybody Project Authors (https://github.com/Etcetera-Type-Co/Anybody).
-Atkinson Hyperlegible: Copyright Braille Institute of America, Inc.
-Ambas fuentes se distribuyen bajo la SIL Open Font License 1.1: https://openfontlicense.org
+Archivo: Copyright The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo).
+Inter: Copyright The Inter Project Authors (https://github.com/rsms/inter).
+JetBrains Mono: Copyright The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono).
+Las tres fuentes se distribuyen bajo la SIL Open Font License 1.1: https://openfontlicense.org
