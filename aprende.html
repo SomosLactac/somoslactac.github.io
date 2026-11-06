@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprende: Lactac</title>
+  <meta name="description" content="Los cuatro pilares de Lactac: energía y motor, adaptación, fatiga y recuperación, y combustible.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261107b">
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!(window.__BRAND__ && window.__BRAND__.booted)) document.documentElement.classList.remove("js");
+    }, 4000);
+  </script>
+  <script defer src="lib/gsap.min.js?v=20261105"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
+  <script defer src="lib/manifest.js?v=20261107"></script>
+  <script defer src="main.js?v=20261107"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="index.html" aria-label="Lactac, ir al inicio">
+      <img src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
+    <nav class="nav-links" id="menu" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="aprende.html" aria-current="page">Aprende</a>
+      <a href="sobre.html">Sobre Lactac</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="page-head wrap">
+      <h1 class="page-title">Aprende</h1>
+      <p class="page-intro">Los cuatro pilares para entender qué pasa dentro de tu cuerpo cuando entrenas.</p>
+      <svg class="chart page-curve" data-chart="load" viewBox="0 0 1000 120" aria-hidden="true" focusable="false">
+        <line class="axis" x1="0" y1="112" x2="1000" y2="112"/>
+        <path class="draw curve" pathLength="1" d="M0 104 C 260 102, 480 100, 620 92 C 740 84, 820 60, 880 36 S 960 10, 995 6"/>
+      </svg>
+    </section>
+
+    <nav class="subnav wrap" aria-label="Pilares">
+      <a href="#energia">Energía y motor</a>
+      <a href="#adaptacion">Adaptación</a>
+      <a href="#fatiga">Fatiga y recuperación</a>
+      <a href="#combustible">Combustible</a>
+    </nav>
+
+    <section class="pillar wrap" id="energia">
+      <div class="pillar-text">
+        <h2>Energía y motor</h2>
+        <p class="covers">Sistemas energéticos, lactato, umbrales, VO2 máx, zonas.</p>
+        <p class="empty">Todavía sin fichas en este pilar.</p>
+      </div>
+      <figure class="plate">
+        <svg class="chart" data-chart="scroll" viewBox="0 0 600 340" role="img" aria-label="Esquema de cómo cambia el aporte de cada sistema energético según dura el esfuerzo: fosfágenos primero, luego glucolítico y, en esfuerzos largos, oxidativo.">
+          <line class="axis" x1="40" y1="30" x2="40" y2="305"/>
+          <line class="axis" x1="40" y1="305" x2="590" y2="305"/>
+          <path class="draw curve-soft" pathLength="1" d="M40 60 C 90 70, 110 250, 200 285 S 400 298, 570 298"/>
+          <path class="draw curve-mid" pathLength="1" d="M40 285 C 90 120, 150 110, 210 130 S 350 270, 570 288"/>
+          <path class="draw curve" pathLength="1" d="M40 295 C 180 280, 280 170, 360 120 S 500 70, 570 65"/>
+          <text class="after" x="80" y="58">Fosfágenos</text>
+          <text class="after" x="215" y="112">Glucolítico</text>
+          <text class="after label-accent" x="570" y="46" text-anchor="end">Oxidativo</text>
+          <text x="40" y="20">Aporte de energía</text>
+          <text x="590" y="332" text-anchor="end">Duración del esfuerzo</text>
+        </svg>
+        <figcaption>Esquema, no son datos reales</figcaption>
+      </figure>
+    </section>
+
+    <section class="pillar pillar-ficha wrap" id="adaptacion">
+      <div class="pillar-text">
+        <h2>Adaptación</h2>
+        <p class="covers">Cómo responde el cuerpo a la carga: fuerza, hipertrofia, resistencia, sobrecarga.</p>
+      </div>
+      <article class="ficha" id="mismo-peso">
+        <div class="ficha-text">
+          <h3>¿Qué pasa si entrenas siempre con el mismo peso?</h3>
+          <p>Un estudio repartió en tres grupos los brazos de 55 mujeres que no entrenaban. En 8 semanas, el tríceps creció un 11,6 % con el mismo peso y un 22,9 % subiéndolo. Sin entrenar, un 1,8 %.</p>
+          <p>Es un solo estudio, en principiantes y en el tríceps. Y subir peso no es la única forma de progresar: en otros dos estudios, sumar repeticiones dio un crecimiento parecido.</p>
+          <details class="fuentes">
+            <summary>Fuentes</summary>
+            <ul>
+              <li><a href="https://doi.org/10.1249/MSS.0000000000003968">Kassiano et al., 2026.</a> Med Sci Sports Exerc. Mismo peso o subiendo peso.</li>
+              <li><a href="https://doi.org/10.7717/peerj.14142">Plotkin et al., 2022.</a> PeerJ. Subir peso o repeticiones, con gente que ya entrenaba.</li>
+              <li><a href="https://doi.org/10.1055/a-2256-5857">Chaves et al., 2024.</a> Int J Sports Med. Subir peso o repeticiones, con gente que empezaba.</li>
+              <li><a href="https://doi.org/10.1249/MSS.0000000000003897">Currier et al., 2026.</a> Revisión del Colegio Americano de Medicina del Deporte (ACSM). Peso y fuerza máxima.</li>
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/19204579/">ACSM, 2009.</a> Med Sci Sports Exerc. Subir un 2-10 % cuando sobran repeticiones.</li>
+            </ul>
+          </details>
+        </div>
+        <figure class="bars" data-bars>
+          <figcaption>Crecimiento del tríceps en 8 semanas</figcaption>
+          <div class="bar-row">
+            <span class="bar-label">Sin entrenar</span>
+            <span class="bar-track"><span class="bar" style="--v:7.9%"></span></span>
+            <span class="bar-value">1,8 %</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Mismo peso</span>
+            <span class="bar-track"><span class="bar" style="--v:50.7%"></span></span>
+            <span class="bar-value">11,6 %</span>
+          </div>
+          <div class="bar-row is-key">
+            <span class="bar-label">Subiendo peso</span>
+            <span class="bar-track"><span class="bar" style="--v:100%"></span></span>
+            <span class="bar-value">22,9 %</span>
+          </div>
+          <p class="bars-source">Fuente: <a href="https://doi.org/10.1249/MSS.0000000000003968">Kassiano et al., 2026</a></p>
+        </figure>
+      </article>
+    </section>
+
+    <section class="pillar pillar-flip wrap" id="fatiga">
+      <div class="pillar-text">
+        <h2>Fatiga y recuperación</h2>
+        <p class="covers">Agujetas, sueño, carga, sobreentrenamiento.</p>
+        <p class="empty">Todavía sin fichas en este pilar.</p>
+      </div>
+      <figure class="plate">
+        <svg class="chart" data-chart="scroll" viewBox="0 0 600 340" role="img" aria-label="Esquema de una carga de entrenamiento: el rendimiento baja por la fatiga y vuelve a subir con la recuperación.">
+          <line class="axis" x1="40" y1="30" x2="40" y2="305"/>
+          <line class="axis" x1="40" y1="305" x2="590" y2="305"/>
+          <path class="after zone" d="M140 170 C 190 170, 200 270, 250 270 C 290 270, 310 205, 335 170 Z"/>
+          <line class="baseline" x1="40" y1="170" x2="590" y2="170"/>
+          <path class="draw curve" pathLength="1" d="M40 170 L 140 170 C 190 170, 200 270, 250 270 C 320 270, 340 110, 410 110 C 470 110, 500 170, 570 170"/>
+          <text class="after" x="140" y="152" text-anchor="middle">Carga</text>
+          <text class="after label-zone" x="250" y="295" text-anchor="middle">Fatiga</text>
+          <text class="after" x="345" y="255">Recuperación</text>
+          <text x="40" y="20">Rendimiento</text>
+          <text x="590" y="332" text-anchor="end">Tiempo</text>
+        </svg>
+        <figcaption>Esquema, no son datos reales</figcaption>
+      </figure>
+    </section>
+
+    <section class="pillar wrap" id="combustible">
+      <div class="pillar-text">
+        <h2>Combustible</h2>
+        <p class="covers">Nutrición solo para rendir: hidratos, proteína, hidratación, cafeína.</p>
+        <p class="empty">Todavía sin fichas en este pilar.</p>
+      </div>
+      <figure class="plate">
+        <svg class="chart" data-chart="scroll" viewBox="0 0 600 340" role="img" aria-label="Esquema de las reservas de glucógeno: bajan durante el esfuerzo y se reponen después.">
+          <line class="axis" x1="40" y1="30" x2="40" y2="305"/>
+          <line class="axis" x1="40" y1="305" x2="590" y2="305"/>
+          <line class="baseline" x1="340" y1="30" x2="340" y2="305"/>
+          <path class="draw curve" pathLength="1" d="M40 70 C 150 80, 280 160, 340 270 C 400 270, 470 120, 570 90"/>
+          <text class="after" x="70" y="150">Esfuerzo</text>
+          <text class="after" x="470" y="215">Reposición</text>
+          <text x="40" y="20">Reservas de glucógeno</text>
+          <text x="590" y="332" text-anchor="end">Tiempo</text>
+        </svg>
+        <figcaption>Esquema, no son datos reales</figcaption>
+      </figure>
+    </section>
+    <div class="page-end"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <img class="footer-logo" src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="Lactac" loading="lazy">
+      <p class="footer-tagline">Entiende, aplica, progresa.</p>
+      <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a></p>
+      <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
+      <p class="footer-credits">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad y cookies</a>
+        <a href="creditos.html">Créditos fotográficos</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

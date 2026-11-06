@@ -75,6 +75,9 @@
   --body: "Inter", "Segoe UI", system-ui, sans-serif;
   --mono: "JetBrains Mono", "Consolas", monospace;
   --gutter: clamp(20px, 4vw, 48px);
+  --content-max: 1760px;
+  /* Margen lateral único: logo, títulos y contenido empiezan en el mismo sitio */
+  --edge: max(var(--gutter), calc((100% - var(--content-max)) / 2 + var(--gutter)));
   --gap-section: clamp(72px, 10vw, 148px);
 }
 
@@ -113,7 +116,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
   padding: .6rem 1rem; background: var(--lime); color: var(--black); font-weight: 700;
 }
 .skip-link:focus { top: 1rem; }
-.wrap { max-width: 1280px; margin-inline: auto; padding-inline: var(--gutter); }
+.wrap { max-width: var(--content-max); margin-inline: auto; padding-inline: var(--gutter); }
 .accent { color: var(--lime); }
 
 /* =============================================================
@@ -122,7 +125,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .nav {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 32px;
-  padding: 10px var(--gutter);
+  padding: 10px var(--edge);
   background: var(--black);
   border-bottom: 1px solid transparent;
   transition: border-color .3s;
@@ -132,6 +135,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .brand img { width: auto; height: 48px; }
 .nav-links { display: flex; flex-wrap: wrap; gap: 0 26px; font-weight: 500; font-size: .92rem; }
 .nav-links a { display: block; padding: 10px 0; text-decoration: none; box-shadow: inset 0 -2px 0 transparent; transition: box-shadow .25s; }
+.nav-links a[aria-current="page"] { color: var(--lime); box-shadow: inset 0 -2px 0 var(--lime); }
 @media (hover: hover) { .nav-links a:hover { box-shadow: inset 0 -2px 0 var(--lime); } }
 .nav-toggle { display: none; }
 
@@ -169,13 +173,11 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .hero {
   position: relative; isolation: isolate;
   min-height: 100vh; min-height: 100svh;
-  padding: 104px var(--gutter) 28px;
+  padding: 104px var(--edge) 28px;
   display: flex; flex-direction: column; gap: 32px;
 }
 .hero-title { font-size: min(11.9vw, 8.2rem); line-height: .96; letter-spacing: -.025em; margin-bottom: 24px; }
 .hero-title span { display: block; }
-/* El texto del hero se alinea con el resto de la página en pantallas grandes */
-.hero-text { margin-left: max(0px, calc((100% - 1280px + var(--gutter) * 2) / 2)); }
 .hero-sub { max-width: 31em; font-size: 1.08em; line-height: 1.5; margin-bottom: 28px; }
 
 .idea { padding-block: var(--gap-section) 0; }
@@ -218,6 +220,32 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .is-key .bar { background: var(--lime); }
 .bars-source { font-family: var(--mono); font-size: .75rem; color: var(--gray); }
 
+/* Cabecera de las páginas interiores */
+.page-head { padding-block: 128px 0; }
+.page-title { font-size: clamp(2.4rem, 8vw, 6.5rem); line-height: .98; letter-spacing: -.025em; margin-bottom: 18px; }
+.page-intro { max-width: 34em; font-size: 1.08em; line-height: 1.5; }
+.page-curve { margin-top: clamp(28px, 4vw, 48px); }
+.page-end { padding-bottom: var(--gap-section); }
+
+.subnav { display: flex; flex-wrap: wrap; gap: 0 26px; margin-top: 18px; font-family: var(--mono); font-size: .85em; }
+.subnav a { display: block; padding-block: 11px; color: var(--gray); text-decoration: none; transition: color .2s; }
+@media (hover: hover) { .subnav a:hover { color: var(--lime); } }
+
+/* Los cuatro pilares en la portada */
+.pillars-home { padding-block: var(--gap-section) 0; }
+.pillars-home h2 { margin-bottom: clamp(28px, 4vw, 48px); }
+.pillar-cards { display: grid; gap: 16px; }
+.pillar-card {
+  display: flex; flex-direction: column; gap: 12px; min-width: 0;
+  padding: clamp(22px, 3vw, 36px);
+  background: var(--graphite); text-decoration: none;
+  box-shadow: inset 0 -3px 0 transparent; transition: box-shadow .25s;
+}
+@media (hover: hover) { .pillar-card:hover { box-shadow: inset 0 -3px 0 var(--lime); } }
+.pillar-num, .pillar-count { font-family: var(--mono); font-size: .8em; color: var(--gray); }
+.pillar-card p { color: var(--gray); }
+.pillar-count { margin-top: auto; padding-top: 8px; color: var(--lime); }
+
 .who { padding-block: var(--gap-section) 0; display: grid; gap: 24px; }
 .who-text { min-width: 0; }
 .who-text p { max-width: 34em; margin-bottom: 14px; }
@@ -236,7 +264,8 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .footer-credits a { display: block; padding-block: 8px; }
 
 /* Páginas legales y créditos */
-.credits { max-width: 860px; margin-inline: auto; padding: 40px var(--gutter) 96px; }
+.credits { padding: 104px var(--edge) 96px; }
+.credits > * { max-width: 860px; }
 .credits h1 { font-size: clamp(1.9rem, 6vw, 3.4rem); line-height: 1.05; letter-spacing: -.015em; margin: 28px 0 20px; }
 .credits ul { padding-left: 1.2em; display: grid; gap: 10px; margin-top: 8px; }
 .legal h2 { font-size: clamp(1.2rem, 2.6vw, 1.6rem); line-height: 1.18; letter-spacing: 0; margin: 36px 0 12px; }
@@ -265,6 +294,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 }
 @media (min-width: 720px) {
   .rules { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+  .pillar-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 720px) and (max-width: 1023px) {
   .chart-hero text { font-size: 20px; }
@@ -274,7 +304,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
   /* La curva queda detrás del título y se dispara a su derecha */
   .hero { justify-content: flex-end; padding-bottom: 40px; }
   .hero-text { position: relative; z-index: 1; padding-bottom: max(64px, 14vh); }
-  .chart-hero { position: absolute; z-index: -1; right: var(--gutter); left: var(--gutter); bottom: 12px; top: 90px; width: calc(100% - var(--gutter) * 2); height: calc(100% - 102px); }
+  .chart-hero { position: absolute; z-index: -1; right: var(--edge); left: var(--edge); bottom: 12px; top: 90px; width: calc(100% - var(--edge) * 2); height: calc(100% - 102px); }
   .chart-hero text { font-size: 15px; }
   .hero-title { font-size: min(8.3vw, 16.5vh, 9rem); }
 }
