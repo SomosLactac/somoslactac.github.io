@@ -199,7 +199,10 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .ficha h3 { font-size: clamp(1.4rem, 2.8vw, 2.25rem); margin-bottom: 20px; }
 .ficha-text { min-width: 0; }
 .ficha-text p { max-width: 34em; margin-bottom: 14px; }
-.fuentes { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 8px; }
+.ficha-block { padding-block: 18px; border-top: 1px solid var(--line); }
+.ficha-block h4 { margin-bottom: 8px; font-family: var(--mono); font-size: .92em; font-weight: 500; }
+.ficha-block p:last-child { margin-bottom: 0; }
+.fuentes { border-top: 1px solid var(--line); padding-top: 8px; }
 .fuentes summary { padding-block: 10px; font-family: var(--mono); font-size: .92em; font-weight: 500; cursor: pointer; }
 .fuentes ul { display: grid; gap: 10px; padding-left: 1.2em; margin: 8px 0 8px; font-size: .92em; }
 .fuentes a { font-weight: 600; }
