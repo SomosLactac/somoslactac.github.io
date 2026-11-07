@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Herramientas: Lactac</title>
+  <meta name="description" content="Calculadoras de entrenamiento con su fuente: 1RM estimado, cuánto subir el peso y frecuencia cardiaca máxima.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261107q">
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!(window.__BRAND__ && window.__BRAND__.booted)) document.documentElement.classList.remove("js");
+    }, 4000);
+  </script>
+  <script defer src="lib/gsap.min.js?v=20261105"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
+  <script defer src="lib/manifest.js?v=20261107"></script>
+  <script defer src="main.js?v=20261107d"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="index.html" aria-label="Lactac, ir al inicio">
+      <img src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
+    <nav class="nav-links" id="menu" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="aprende.html">Aprende</a>
+      <a href="estudios.html">Estudios</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="herramientas.html" aria-current="page">Herramientas</a>
+      <a href="sobre.html">Sobre Lactac</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="page-head wrap">
+      <h1 class="page-title">Herramientas</h1>
+      <p class="page-intro">Calculadoras para entrenar con números, cada una con su fórmula, su fuente y sus límites a la vista.</p>
+      <svg class="chart page-curve" data-chart="load" viewBox="0 0 1000 120" aria-hidden="true" focusable="false">
+        <line class="axis" x1="0" y1="112" x2="1000" y2="112"/>
+        <path class="draw curve" pathLength="1" d="M0 104 C 260 102, 480 100, 620 92 C 740 84, 820 60, 880 36 S 960 10, 995 6"/>
+      </svg>
+    </section>
+
+    <section class="tools wrap">
+      <article class="tool" id="1rm">
+        <h2>1RM estimado</h2>
+        <p>Calcula el peso máximo que podrías levantar una vez a partir de una serie hasta el fallo, sin tener que probarlo. El cálculo cambia según el ejercicio.</p>
+        <form class="tool-form" data-tool="1rm" novalidate>
+            <div class="tool-field">
+              <label for="1rm-ejercicio">Ejercicio</label>
+              <span class="tool-input"><select id="1rm-ejercicio" name="ejercicio">
+                <option value="banca">Press de banca</option>
+                <option value="prensa">Prensa de piernas</option>
+                <option value="general" selected>Otro ejercicio</option>
+              </select></span>
+            </div>
+            <div class="tool-field">
+              <label for="1rm-peso">Peso levantado</label>
+              <span class="tool-input"><input id="1rm-peso" name="peso" type="text" inputmode="decimal" autocomplete="off" required><span class="tool-unit">kg</span></span>
+            </div>
+            <div class="tool-field">
+              <label for="1rm-reps">Repeticiones hechas (1 a 10)</label>
+              <span class="tool-input"><input id="1rm-reps" name="reps" type="text" inputmode="decimal" autocomplete="off" required><span class="tool-unit">reps</span></span>
+            </div>
+        </form>
+        <output class="tool-result" for="1rm-ejercicio 1rm-peso 1rm-reps" aria-live="polite">Rellena el peso y las repeticiones.</output>
+        <section class="ficha-block">
+          <h3>Cómo se calcula</h3>
+          <p>Con el mismo porcentaje del 1RM no se hacen las mismas repeticiones en todos los ejercicios: en prensa de piernas se hacen más que en press de banca. Por eso usamos las tablas de <a href="https://pubmed.ncbi.nlm.nih.gov/37792272/">Nuzzo et al., 2024</a>: una para press de banca, otra para prensa de piernas y una general para el resto de ejercicios.</p>
+          <p>La calculadora busca en la tabla de tu ejercicio a qué porcentaje del 1RM corresponden tus repeticiones, interpolando entre sus valores, y divide el peso entre ese porcentaje. Con «Otro ejercicio» también verás la fórmula clásica: 1RM = peso × 36 / (37 − repeticiones) (<a href="https://doi.org/10.1080/07303084.1993.10606684">Brzycki, 1993</a>).</p>
+        </section>
+        <section class="ficha-block">
+          <h3>Límites</h3>
+          <p>Es una estimación de la media: entre personas hay mucha variación, sobre todo en prensa de piernas. Las tablas empiezan en el 95 % del 1RM; por encima, la calculadora usa que al 100 % se hace una repetición. Faltan datos para tener tablas propias de otros ejercicios (<a href="https://pubmed.ncbi.nlm.nih.gov/37792272/">Nuzzo et al., 2024</a>).</p>
+          <p>Usa series de 10 repeticiones o menos: en un estudio, las de 5 fueron las que mejor predijeron el 1RM (<a href="https://pubmed.ncbi.nlm.nih.gov/16937972/">Reynolds et al., 2006</a>).</p>
+        </section>
+        <details class="fuentes">
+          <summary>Referencias</summary>
+          <ul>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/37792272/">Nuzzo et al., 2024</a> Sports Med. Metarregresión con 7289 personas: tablas de repeticiones a cada % del 1RM, en general, en press de banca y en prensa de piernas.</li>
+            <li><a href="https://doi.org/10.1080/07303084.1993.10606684">Brzycki, 1993</a> J Phys Educ Recreat Dance. La fórmula clásica.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/16937972/">Reynolds et al., 2006</a> J Strength Cond Res. Precisión según el número de repeticiones en press de banca y prensa de piernas.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="tool" id="cuanto-subir">
+        <h2>Cuánto subir el peso</h2>
+        <p>Si te sobran una o dos repeticiones de las que buscas, el ACSM recomienda subir el peso entre un 2 y un 10 %.</p>
+        <form class="tool-form" data-tool="subir" novalidate>
+            <div class="tool-field">
+              <label for="subir-peso">Peso actual</label>
+              <span class="tool-input"><input id="subir-peso" name="peso" type="text" inputmode="decimal" autocomplete="off" required><span class="tool-unit">kg</span></span>
+            </div>
+        </form>
+        <output class="tool-result" for="subir-peso" aria-live="polite">Escribe el peso con el que entrenas.</output>
+        <section class="ficha-block">
+          <h3>Fórmula</h3>
+          <p>Peso actual × 1,02 y peso actual × 1,10 (<a href="https://pubmed.ncbi.nlm.nih.gov/19204579/">ACSM, 2009</a>).</p>
+        </section>
+        <section class="ficha-block">
+          <h3>Límites</h3>
+          <p>El rango de 2 a 10 % viene del posicionamiento del ACSM de 2009. Su actualización de 2026 sigue recomendando entrenar de forma progresiva, aunque en su resumen no da un porcentaje (<a href="https://pubmed.ncbi.nlm.nih.gov/41843416/">Currier et al., 2026</a>).</p>
+          <p>Subir el peso no es la única forma de progresar: en gente que ya entrenaba, sumar repeticiones dio adaptaciones parecidas (<a href="https://pubmed.ncbi.nlm.nih.gov/36199287/">Plotkin et al., 2022</a>). Lo que sí suma es progresar: con el mismo peso todo el tiempo, el músculo creció menos (<a href="https://pubmed.ncbi.nlm.nih.gov/41718594/">Kassiano et al., 2026</a>). Redondea al peso que tengas disponible.</p>
+        </section>
+        <details class="fuentes">
+          <summary>Referencias</summary>
+          <ul>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/19204579/">ACSM, 2009</a> Med Sci Sports Exerc. Subir un 2-10 % cuando sobran una o dos repeticiones.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/41843416/">Currier et al., 2026</a> Med Sci Sports Exerc. Actualización del ACSM: entrenamiento de fuerza progresivo en adultos sanos.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/36199287/">Plotkin et al., 2022</a> PeerJ. Progresar subiendo peso o repeticiones.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/41718594/">Kassiano et al., 2026</a> Med Sci Sports Exerc. Mismo peso o subiendo peso.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="tool" id="fc-max">
+        <h2>Frecuencia cardiaca máxima</h2>
+        <p>Estima tu frecuencia cardiaca máxima a partir de la edad, por ejemplo para calcular tus zonas.</p>
+        <form class="tool-form" data-tool="fcmax" novalidate>
+            <div class="tool-field">
+              <label for="fcmax-edad">Edad</label>
+              <span class="tool-input"><input id="fcmax-edad" name="edad" type="text" inputmode="decimal" autocomplete="off" required><span class="tool-unit">años</span></span>
+            </div>
+        </form>
+        <output class="tool-result" for="fcmax-edad" aria-live="polite">Escribe tu edad.</output>
+        <section class="ficha-block">
+          <h3>Fórmula</h3>
+          <p>FC máx = 208 − 0,7 × edad (<a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a>).</p>
+          <p>Como segunda referencia, un estudio con 3320 adultos sanos llegó a 211 − 0,64 × edad (<a href="https://pubmed.ncbi.nlm.nih.gov/22376273/">Nes et al., 2013</a>). La calculadora muestra las dos.</p>
+        </section>
+        <section class="ficha-block">
+          <h3>Límites</h3>
+          <p>Las dos salen de medias de grupo: el error típico es de unos 11 ppm (<a href="https://pubmed.ncbi.nlm.nih.gov/22376273/">Nes et al., 2013</a>), así que tu valor real puede ser distinto. Si la mides en una prueba de esfuerzo, usa ese valor.</p>
+          <p>En ninguno de los dos estudios la FC máx dependía del sexo ni del nivel de actividad. Además, la fórmula clásica de 220 − edad la subestima en personas mayores (<a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a>), y en el otro estudio las fórmulas anteriores la subestimaban a partir de los 30 años (<a href="https://pubmed.ncbi.nlm.nih.gov/22376273/">Nes et al., 2013</a>).</p>
+        </section>
+        <details class="fuentes">
+          <summary>Referencias</summary>
+          <ul>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a> J Am Coll Cardiol. Metaanálisis con 18 712 personas y validación en laboratorio.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/22376273/">Nes et al., 2013</a> Scand J Med Sci Sports. 3320 adultos sanos con prueba de esfuerzo máxima.</li>
+          </ul>
+        </details>
+      </article>
+    </section>
+    <noscript><p class="wrap tools-note">Las calculadoras necesitan JavaScript activado.</p></noscript>
+    <p class="wrap tools-note">Los cálculos se hacen en tu navegador: no se guarda ni se envía ningún dato.</p>
+    <div class="page-end"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <img class="footer-logo" src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="Lactac" loading="lazy">
+      <p class="footer-tagline">Entiende, aplica, progresa.</p>
+      <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a></p>
+      <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
+      <p class="footer-updated">Última actualización: 7 de noviembre de 2026.</p>
+      <p class="footer-credits">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad y cookies</a>
+        <a href="creditos.html">Créditos fotográficos</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

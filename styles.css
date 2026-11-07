@@ -275,6 +275,30 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .flow .bars-source { justify-self: start; margin-top: 6px; }
 .latest-more { margin-top: 14px; font-size: .92em; }
 
+/* Herramientas */
+.tools { padding-top: clamp(32px, 4vw, 56px); display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items: start; }
+.tool { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: clamp(22px, 3vw, 36px); background: var(--graphite); }
+.tool h2 { font-size: clamp(1.3rem, 2.2vw, 1.75rem); line-height: 1.12; letter-spacing: -.005em; }
+.tool > p { color: var(--gray); }
+.tool h3 { margin-bottom: 8px; font-family: var(--mono); font-size: .92em; font-weight: 500; }
+.tool-form { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.tool-field label { display: block; margin-bottom: 6px; font-size: .92em; }
+.tool-input { display: flex; align-items: center; border: 1.5px solid var(--gray); background: var(--black); transition: border-color .2s; }
+.tool-input:focus-within { border-color: var(--lime); }
+.tool-input input { flex: 1; width: 100%; min-width: 0; min-height: 48px; padding: 0 14px; border: 0; background: transparent; color: var(--bone); font: inherit; font-family: var(--mono); font-size: 1.05em; }
+.tool-input input:focus { outline: none; }
+.tool-input select { flex: 1; width: 100%; min-width: 0; min-height: 48px; padding: 0 14px; border: 0; background: var(--black); color: var(--bone); font: inherit; cursor: pointer; }
+.tool-input select:focus { outline: none; }
+.tool-unit { padding-right: 14px; font-family: var(--mono); font-size: .85em; color: var(--gray); }
+.tool-result { display: block; padding: 16px 18px; border-left: 4px solid var(--lime); background: rgba(200, 255, 0, .09); font-family: var(--mono); font-size: .95em; }
+.tool-result strong { display: block; color: var(--lime); font-size: 1.6em; font-weight: 700; }
+.tool-result.is-error { border-left-color: var(--red); background: rgba(255, 77, 46, .1); }
+.tool .ficha-block p { font-size: .92em; }
+.tool .ficha-block p + p { margin-top: 10px; }
+.tool .fuentes { padding-top: 4px; }
+.tool .fuentes ul { font-size: .85em; }
+.tools-note { margin-top: 18px; font-family: var(--mono); font-size: .8em; color: var(--gray); }
+
 /* Glosario */
 .glossary { padding-top: clamp(32px, 4vw, 56px); }
 .term { display: grid; gap: 10px 48px; padding-block: 28px; border-top: 1px solid var(--line); }

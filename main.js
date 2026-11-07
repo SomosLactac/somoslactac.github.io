@@ -63,9 +63,78 @@
     });
   }
 
+  // Calculadoras de herramientas.html: calculan al escribir, sin enviar nada
+  function initTools() {
+    var fmt = function (n, d) { return n.toLocaleString("es-ES", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+    var num = function (form, name) {
+      var el = form.elements[name];
+      if (!el || el.value === "") return null;
+      var v = parseFloat(String(el.value).replace(",", "."));
+      return isFinite(v) ? v : NaN;
+    };
+    // Repeticiones medias a cada % del 1RM (Nuzzo et al., 2024, Sports Med, figuras 2 a 4).
+    // Se añade el punto que define el propio 1RM: al 100 % se hace 1 repetición.
+    var PCT = [100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50];
+    var REPS = {
+      general: [1, 3.28, 4.94, 7.15, 9.75, 12.37, 14.80, 17.11, 19.53, 22.43, 25.99],
+      banca: [1, 2.59, 4.11, 6.23, 8.82, 11.51, 14.08, 16.59, 19.34, 22.79, 27.25],
+      prensa: [1, 7.04, 8.69, 10.69, 13.05, 15.79, 18.96, 22.59, 26.74, 31.47, 36.86]
+    };
+    var NAMES = { general: "la tabla general", banca: "la tabla de press de banca", prensa: "la tabla de prensa de piernas" };
+    var pctFromReps = function (ex, r) {
+      var reps = REPS[ex] || REPS.general;
+      for (var i = 1; i < reps.length; i++) {
+        if (r <= reps[i]) {
+          var t = (r - reps[i - 1]) / (reps[i] - reps[i - 1]);
+          return PCT[i - 1] + t * (PCT[i] - PCT[i - 1]);
+        }
+      }
+      return PCT[PCT.length - 1];
+    };
+    var calc = {
+      "1rm": function (f) {
+        var p = num(f, "peso"), r = num(f, "reps");
+        var ex = f.elements.ejercicio ? f.elements.ejercicio.value : "general";
+        if (p === null || r === null) return [null, "Rellena el peso y las repeticiones."];
+        if (!(p > 0) || p > 500) return [false, "Escribe un peso entre 1 y 500 kg."];
+        if (!(r >= 1 && r <= 10) || Math.round(r) !== r) return [false, "Usa una serie de 1 a 10 repeticiones."];
+        var pct = pctFromReps(ex, r);
+        var html = "<strong>" + fmt(p / (pct / 100), 1) + " kg</strong>1RM estimado (" + fmt(pct, 0) + " % del 1RM según " + NAMES[ex] + ")";
+        if (ex === "general") html += "<br>Con la fórmula de Brzycki: " + fmt(p * 36 / (37 - r), 1) + " kg";
+        return [true, html];
+      },
+      subir: function (f) {
+        var p = num(f, "peso");
+        if (p === null) return [null, "Escribe el peso con el que entrenas."];
+        if (!(p > 0) || p > 500) return [false, "Escribe un peso entre 1 y 500 kg."];
+        return [true, "<strong>" + fmt(p * 1.02, 1) + "–" + fmt(p * 1.10, 1) + " kg</strong>Siguiente peso a probar"];
+      },
+      fcmax: function (f) {
+        var e = num(f, "edad");
+        if (e === null) return [null, "Escribe tu edad."];
+        if (!(e >= 18 && e <= 90)) return [false, "La fórmula es para adultos: escribe una edad entre 18 y 90 años."];
+        return [true, "<strong>" + fmt(208 - 0.7 * e, 0) + " ppm</strong>Frecuencia cardiaca máxima estimada (Tanaka)<br>Con la fórmula de Nes: " + fmt(211 - 0.64 * e, 0) + " ppm"];
+      }
+    };
+    $$("[data-tool]").forEach(function (form) {
+      var fn = calc[form.getAttribute("data-tool")];
+      var out = form.parentNode.querySelector(".tool-result");
+      if (!fn || !out) return;
+      var run = function () {
+        var res = fn(form);
+        out.innerHTML = res[1];
+        out.classList.toggle("is-error", res[0] === false);
+      };
+      form.addEventListener("input", run);
+      form.addEventListener("change", run);
+      form.addEventListener("submit", function (e) { e.preventDefault(); run(); });
+    });
+  }
+
   function boot() {
     safe(initNav, "initNav");
     safe(initMenu, "initMenu");
+    safe(initTools, "initTools");
 
     if (!reduced && window.gsap && window.ScrollTrigger) {
       try { gsap.registerPlugin(ScrollTrigger); } catch (_) {}
