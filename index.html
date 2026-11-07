@@ -10,7 +10,7 @@
   <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261107za">
+  <link rel="stylesheet" href="styles.css?v=20261107zb">
   <script>
     document.documentElement.classList.add("js");
     setTimeout(function () {
@@ -32,6 +32,7 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
     <nav class="nav-links" id="menu" aria-label="Principal">
       <a href="index.html" aria-current="page">Inicio</a>
+      <a href="novedades.html">Novedades</a>
       <a href="aprende.html">Aprende</a>
       <a href="estudios.html">Estudios</a>
       <a href="glosario.html">Glosario</a>
@@ -72,24 +73,31 @@
 
     <section class="latest wrap">
       <h2>Lo último</h2>
-      <article class="ficha">
-        <div class="ficha-text">
-          <p class="ficha-meta">Energía y motor</p>
-          <h3>¿El VO2 máx lo es todo?</h3>
-          <p>El VO2 máx marca el techo de tu rendimiento de resistencia, pero no lo explica todo: el umbral de lactato y la eficiencia también deciden a qué ritmo puedes ir (<a href="https://pubmed.ncbi.nlm.nih.gov/17901124/">Joyner y Coyle, 2008</a>).</p>
-          <a class="btn ficha-btn" href="aprende.html#vo2-max-todo">Leer la ficha</a>
-          <p class="latest-more"><a href="aprende.html">Ver todas las fichas</a></p>
-        </div>
-        <figure class="flow" aria-label="Esquema: el VO2 máx y el umbral de lactato marcan el oxígeno que puedes sostener; con la eficiencia, eso da tu velocidad o potencia.">
-          <figcaption class="flow-title">Qué decide tu rendimiento de resistencia</figcaption>
-          <div class="flow-step"><span class="flow-box">VO2 máx</span><span class="flow-op" aria-hidden="true">×</span><span class="flow-box">Umbral de lactato</span></div>
-          <span class="flow-arrow" aria-hidden="true">↓</span>
-          <div class="flow-step"><span class="flow-box flow-mid">Oxígeno que puedes sostener</span><span class="flow-op" aria-hidden="true">×</span><span class="flow-box">Eficiencia</span></div>
-          <span class="flow-arrow" aria-hidden="true">↓</span>
-          <div class="flow-step"><span class="flow-box flow-key">Velocidad o potencia</span></div>
-          <p class="bars-source">Esquema basado en <a href="https://pubmed.ncbi.nlm.nih.gov/17901124/">Joyner y Coyle, 2008</a></p>
-        </figure>
-      </article>
+      <!-- Las tres primeras novedades de novedades.html -->
+      <ul class="news-list">
+        <li class="news-item">
+          <p class="news-tag">Ficha · Combustible</p>
+          <div class="news-body">
+            <h3><a href="aprende.html#cafeina">¿La cafeína mejora el rendimiento?</a></h3>
+            <p>Qué mejora, qué dosis se han estudiado y hasta dónde se considera segura.</p>
+          </div>
+        </li>
+        <li class="news-item">
+          <p class="news-tag">Glosario</p>
+          <div class="news-body">
+            <h3><a href="glosario.html#contraccion-excentrica">Contracción excéntrica</a></h3>
+            <p>Nuevo término, con esquema propio y el estudio de <a href="estudios.html#hody-2019">Hody 2019</a>.</p>
+          </div>
+        </li>
+        <li class="news-item">
+          <p class="news-tag">Ficha · Fatiga y recuperación</p>
+          <div class="news-body">
+            <h3><a href="aprende.html#agujetas">¿Qué funciona de verdad contra las agujetas?</a></h3>
+            <p>Por qué salen y qué técnicas de recuperación las reducen, y cuáles no.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="latest-more"><a href="novedades.html">Ver todas las novedades</a></p>
     </section>
 
     <section class="pillars-home wrap">
@@ -114,12 +122,14 @@
           <span class="pillar-num">03</span>
           <h3>Fatiga y recuperación</h3>
           <p>Agujetas, sueño, carga, sobreentrenamiento.</p>
+          <span class="pillar-count">1 ficha</span>
         </a>
         <a class="pillar-card" href="aprende.html#combustible">
           <img class="pillar-photo" src="assets/photos/combustible-800.webp" srcset="assets/photos/combustible-800.webp 800w, assets/photos/combustible-1600.webp 1600w" sizes="(min-width: 720px) 50vw, 100vw" width="800" height="450" alt="" loading="lazy" decoding="async">
           <span class="pillar-num">04</span>
           <h3>Combustible</h3>
           <p>Nutrición solo para rendir: hidratos, proteína, hidratación, cafeína.</p>
+          <span class="pillar-count">1 ficha</span>
         </a>
       </div>
     </section>
