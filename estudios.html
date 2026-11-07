@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudios: Lactac</title>
+  <meta name="description" content="Estudios de fisiología del rendimiento explicados en claro: quién participó, qué se hizo, qué salió y hasta dónde llega.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261107g">
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!(window.__BRAND__ && window.__BRAND__.booted)) document.documentElement.classList.remove("js");
+    }, 4000);
+  </script>
+  <script defer src="lib/gsap.min.js?v=20261105"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
+  <script defer src="lib/manifest.js?v=20261107"></script>
+  <script defer src="main.js?v=20261107"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="index.html" aria-label="Lactac, ir al inicio">
+      <img src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
+    <nav class="nav-links" id="menu" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="aprende.html">Aprende</a>
+      <a href="estudios.html" aria-current="page">Estudios</a>
+      <a href="sobre.html">Sobre Lactac</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="page-head wrap">
+      <h1 class="page-title">Estudios</h1>
+      <p class="page-intro">Cada estudio, explicado en claro: quién participó, qué se hizo, qué salió y hasta dónde llega.</p>
+      <svg class="chart page-curve" data-chart="load" viewBox="0 0 1000 120" aria-hidden="true" focusable="false">
+        <line class="axis" x1="0" y1="112" x2="1000" y2="112"/>
+        <path class="draw curve" pathLength="1" d="M0 104 C 260 102, 480 100, 620 92 C 740 84, 820 60, 880 36 S 960 10, 995 6"/>
+      </svg>
+    </section>
+
+    <section class="studies wrap">
+      <article class="ficha" id="kassiano-2026">
+        <div class="ficha-text">
+          <p class="ficha-meta">Adaptación · Med Sci Sports Exerc, 2026</p>
+          <h3>¿Crece más el músculo si subes el peso?</h3>
+          <section class="ficha-block">
+            <h4>Quién participó</h4>
+            <p>55 mujeres jóvenes que no entrenaban. Cada brazo se asignó al azar a un grupo: 37 brazos fueron subiendo el peso, 32 mantuvieron el mismo y 41 no entrenaron.</p>
+          </section>
+          <section class="ficha-block">
+            <h4>Qué se hizo</h4>
+            <p>Extensión de codo con un solo brazo: 3 series de 8 a 12 repeticiones, 3 días por semana, durante 8 semanas. Un grupo subía el peso cada vez que llegaba al tope de repeticiones. El otro mantuvo el mismo peso y las mismas repeticiones. El grosor del tríceps se midió con ecografía.</p>
+          </section>
+          <section class="ficha-block">
+            <h4>Qué salió</h4>
+            <p>Los dos grupos que entrenaron crecieron más que el que no entrenó, y subir el peso dio más crecimiento que mantenerlo.</p>
+          </section>
+          <section class="ficha-block">
+            <h4>Hasta dónde llega</h4>
+            <p>Son 8 semanas, en mujeres jóvenes sin experiencia, con un solo ejercicio y midiendo solo el tríceps. Los autores dejan abierto si entrenar sin subir la carga sigue funcionando en periodos más largos.</p>
+          </section>
+          <section class="ficha-block">
+            <h4>Fuente</h4>
+            <p><a href="https://doi.org/10.1249/MSS.0000000000003968">Kassiano et al., 2026.</a> Progressive Overload Affects the Magnitude of Muscle Hypertrophy. Med Sci Sports Exerc, 58(7), 1556-1565.</p>
+          </section>
+          <a class="btn ficha-btn" href="aprende.html#mismo-peso-aplicar">Cómo aplicarlo</a>
+        </div>
+        <figure class="bars" data-bars>
+          <figcaption>Crecimiento del tríceps en 8 semanas</figcaption>
+          <div class="bar-row">
+            <span class="bar-label">Sin entrenar</span>
+            <span class="bar-track"><span class="bar" style="--v:7.9%"></span></span>
+            <span class="bar-value">1,8 %</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Mismo peso</span>
+            <span class="bar-track"><span class="bar" style="--v:50.7%"></span></span>
+            <span class="bar-value">11,6 %</span>
+          </div>
+          <div class="bar-row is-key">
+            <span class="bar-label">Subiendo peso</span>
+            <span class="bar-track"><span class="bar" style="--v:100%"></span></span>
+            <span class="bar-value">22,9 %</span>
+          </div>
+          <p class="bars-source">Fuente: <a href="https://doi.org/10.1249/MSS.0000000000003968">Kassiano et al., 2026</a></p>
+        </figure>
+      </article>
+    </section>
+    <div class="page-end"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <img class="footer-logo" src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="Lactac" loading="lazy">
+      <p class="footer-tagline">Entiende, aplica, progresa.</p>
+      <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a></p>
+      <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
+      <p class="footer-updated">Última actualización: 7 de noviembre de 2026.</p>
+      <p class="footer-credits">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad y cookies</a>
+        <a href="creditos.html">Créditos fotográficos</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

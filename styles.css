@@ -202,6 +202,11 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .ficha-block { padding-block: 18px; border-top: 1px solid var(--line); }
 .ficha-block h4 { margin-bottom: 8px; font-family: var(--mono); font-size: .92em; font-weight: 500; }
 .ficha-block p:last-child { margin-bottom: 0; }
+/* «Cómo aplicarlo» se resalta en todas las fichas */
+.ficha-apply { margin-block: 6px; padding: 18px 20px; border-top: 0; border-left: 4px solid var(--lime); background: rgba(200, 255, 0, .09); }
+.ficha-apply h4 { color: var(--lime); font-weight: 700; }
+.ficha-apply + .ficha-block { border-top: 0; }
+.ficha-apply a { color: var(--lime); }
 .fuentes { border-top: 1px solid var(--line); padding-top: 8px; }
 .fuentes summary { padding-block: 10px; font-family: var(--mono); font-size: .92em; font-weight: 500; cursor: pointer; }
 .fuentes ul { display: grid; gap: 10px; padding-left: 1.2em; margin: 8px 0 8px; font-size: .92em; }
@@ -234,11 +239,12 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .subnav a { display: block; padding-block: 11px; color: var(--gray); text-decoration: none; transition: color .2s; }
 @media (hover: hover) { .subnav a:hover { color: var(--lime); } }
 
-/* Lo último en la portada */
+/* Lo último en la portada y lista de estudios */
 .latest { padding-block: var(--gap-section) 0; }
 .latest h2 { margin-bottom: clamp(28px, 4vw, 48px); }
-.latest-meta { font-family: var(--mono); font-size: .85em; color: var(--lime); }
-.latest-btn { margin-top: 10px; }
+.studies { padding-top: clamp(40px, 5vw, 64px); display: grid; gap: 16px; }
+.ficha-meta { font-family: var(--mono); font-size: .85em; color: var(--lime); }
+.ficha-btn { margin-top: 10px; }
 
 /* Los cuatro pilares en la portada */
 .pillars-home { padding-block: var(--gap-section) 0; }
