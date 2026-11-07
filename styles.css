@@ -261,6 +261,20 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .pillar-card p { color: var(--gray); }
 .pillar-count { margin-top: auto; padding-top: 8px; color: var(--lime); }
 
+/* Ficha dentro de un pilar con gráfica */
+.pillar > .ficha { grid-column: 1 / -1; }
+
+/* Esquema de flujo (sin datos) */
+.flow { min-width: 0; display: grid; gap: 10px; align-self: center; justify-items: center; font-family: var(--mono); font-size: .85em; }
+.flow-title { justify-self: start; margin-bottom: 6px; color: var(--bone); }
+.flow-step { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; width: 100%; }
+.flow-box { flex: 1 1 0; min-width: 0; padding: 12px 14px; border: 1.5px solid var(--gray); text-align: center; line-height: 1.35; }
+.flow-mid { border-color: var(--bone); }
+.flow-key { flex: 0 1 auto; padding-inline: 28px; border-color: var(--lime); background: var(--lime); color: var(--black); font-weight: 700; }
+.flow-op, .flow-arrow { color: var(--lime); font-weight: 700; }
+.flow .bars-source { justify-self: start; margin-top: 6px; }
+.latest-more { margin-top: 14px; font-size: .92em; }
+
 /* Glosario */
 .glossary { padding-top: clamp(32px, 4vw, 56px); }
 .term { display: grid; gap: 10px 48px; padding-block: 28px; border-top: 1px solid var(--line); }
