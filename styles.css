@@ -260,6 +260,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .footer-logo { width: 170px; margin-left: -8px; }
 .footer-tagline { font-family: var(--mono); color: var(--lime); margin-bottom: 8px; }
 .footer-ig a { display: inline-block; padding-block: 6px; }
+.footer-updated { font-family: var(--mono); font-size: .85em; color: var(--gray); }
 .footer-credits { display: flex; flex-wrap: wrap; gap: 0 20px; margin-top: 6px; }
 .footer-credits a { display: block; padding-block: 8px; }
 
