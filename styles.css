@@ -300,6 +300,12 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .tool-unit { padding-right: 14px; font-family: var(--mono); font-size: .85em; color: var(--gray); }
 .tool-result { display: block; padding: 16px 18px; border-left: 4px solid var(--lime); background: rgba(200, 255, 0, .09); font-family: var(--mono); font-size: .95em; }
 .tool-result strong { display: block; color: var(--lime); font-size: 1.6em; font-weight: 700; }
+.tool-zones { width: 100%; margin-top: 14px; border-collapse: collapse; font-size: .95em; }
+.tool-zones th, .tool-zones td { padding: 8px 6px; border-top: 1px solid rgba(243, 243, 238, .14); text-align: left; font-weight: 400; }
+.tool-zones thead th { border-top: 0; color: var(--gray); font-size: .85em; }
+.tool-zones tbody th { color: var(--bone); font-weight: 700; }
+.tool-zone-n { display: block; color: var(--lime); font-size: .8em; font-weight: 700; }
+.tool-zones td { white-space: nowrap; }
 .tool-result.is-error { border-left-color: var(--red); background: rgba(255, 77, 46, .1); }
 .tool .ficha-block p { font-size: .92em; }
 .tool .ficha-block p + p { margin-top: 10px; }

@@ -114,6 +114,30 @@
         if (e === null) return [null, "Escribe tu edad."];
         if (!(e >= 18 && e <= 90)) return [false, "La fórmula es para adultos: escribe una edad entre 18 y 90 años."];
         return [true, "<strong>" + fmt(208 - 0.7 * e, 0) + " ppm</strong>Frecuencia cardiaca máxima estimada (Tanaka)<br>Con la fórmula de Nes: " + fmt(211 - 0.64 * e, 0) + " ppm"];
+      },
+      // Clasificación de la intensidad del ACSM (Garber et al., 2011): % FC máx y % FC de reserva.
+      zonas: function (f) {
+        var m = num(f, "fcmax"), e = num(f, "edad"), r = num(f, "reposo"), est = false;
+        if (m === null) {
+          if (e === null) return [null, "Escribe tu FC máxima o tu edad."];
+          if (!(e >= 18 && e <= 90)) return [false, "La fórmula es para adultos: escribe una edad entre 18 y 90 años."];
+          m = Math.round(208 - 0.7 * e); est = true;
+        }
+        if (!(m >= 120 && m <= 230)) return [false, "Escribe una FC máxima entre 120 y 230 ppm."];
+        if (r !== null && !(r >= 30 && r <= 110 && r < m - 40)) return [false, "Escribe una FC en reposo entre 30 y 110 ppm."];
+        var names = ["Muy ligera", "Ligera", "Moderada", "Vigorosa", "Casi máxima"];
+        var cuts = r === null ? [57, 64, 77, 96] : [30, 40, 60, 90];
+        var hr = function (p) { return Math.round(r === null ? m * p / 100 : r + (m - r) * p / 100); };
+        var rows = "";
+        for (var i = 0; i < 5; i++) {
+          var lo = i === 0 ? null : hr(cuts[i - 1]), hi = i === 4 ? m : hr(cuts[i]) - 1;
+          var pct = i === 0 ? "&lt; " + cuts[0] + " %" : i === 4 ? "≥ " + cuts[3] + " %" : cuts[i - 1] + "–" + (cuts[i] - 1) + " %";
+          var ppm = i === 0 ? "&lt; " + hr(cuts[0]) : lo + "–" + hi;
+          rows += "<tr><th scope=\"row\"><span class=\"tool-zone-n\">Zona " + (i + 1) + "</span>" + names[i] + "</th><td>" + pct + "</td><td>" + ppm + "</td></tr>";
+        }
+        var head = "<strong>" + m + " ppm</strong>" + (est ? "FC máxima estimada con tu edad (Tanaka)" : "Tu FC máxima") + (r === null ? "" : " · reposo " + fmt(r, 0) + " ppm");
+        var table = "<table class=\"tool-zones\"><thead><tr><th scope=\"col\">Intensidad</th><th scope=\"col\">" + (r === null ? "% FC máx" : "% FC reserva") + "</th><th scope=\"col\">ppm</th></tr></thead><tbody>" + rows + "</tbody></table>";
+        return [true, head + table];
       }
     };
     $$("[data-tool]").forEach(function (form) {

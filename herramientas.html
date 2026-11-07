@@ -10,7 +10,7 @@
   <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261107s">
+  <link rel="stylesheet" href="styles.css?v=20261107v">
   <script>
     document.documentElement.classList.add("js");
     setTimeout(function () {
@@ -20,7 +20,7 @@
   <script defer src="lib/gsap.min.js?v=20261105"></script>
   <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
   <script defer src="lib/manifest.js?v=20261107"></script>
-  <script defer src="main.js?v=20261107d"></script>
+  <script defer src="main.js?v=20261107f"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -125,7 +125,7 @@
 
       <article class="tool" id="fc-max">
         <h2>Frecuencia cardiaca máxima</h2>
-        <p>Estima tu <a href="glosario.html#fc-max">frecuencia cardiaca máxima</a> a partir de la edad, por ejemplo para calcular tus <a href="glosario.html#zonas-de-entrenamiento">zonas</a>.</p>
+        <p>Estima tu <a href="glosario.html#fc-max">frecuencia cardiaca máxima</a> a partir de la edad, por ejemplo para calcular tus <a href="glosario.html#zonas-de-entrenamiento">zonas</a> con la <a href="#zonas">calculadora de zonas</a>.</p>
         <form class="tool-form" data-tool="fcmax" novalidate>
             <div class="tool-field">
               <label for="fcmax-edad">Edad</label>
@@ -148,6 +148,43 @@
           <ul>
             <li><a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a> J Am Coll Cardiol. Metaanálisis con 18 712 personas y validación en laboratorio.</li>
             <li><a href="https://pubmed.ncbi.nlm.nih.gov/22376273/">Nes et al., 2013</a> Scand J Med Sci Sports. 3320 adultos sanos con prueba de esfuerzo máxima.</li>
+          </ul>
+        </details>
+      </article>
+      <article class="tool" id="zonas">
+        <h2>Zonas por frecuencia cardiaca</h2>
+        <p>Calcula entre qué pulsaciones está cada nivel de intensidad. Si conoces tu <a href="glosario.html#fc-max">frecuencia cardiaca máxima</a>, escríbela; si no, pon tu edad y la estimamos. Si añades tu pulso en reposo, el cálculo usa la <a href="glosario.html#fc-reserva">frecuencia cardiaca de reserva</a>.</p>
+        <form class="tool-form" data-tool="zonas" novalidate>
+            <div class="tool-field">
+              <label for="zonas-fcmax">FC máxima (si la conoces)</label>
+              <span class="tool-input"><input id="zonas-fcmax" name="fcmax" type="text" inputmode="decimal" autocomplete="off"><span class="tool-unit">ppm</span></span>
+            </div>
+            <div class="tool-field">
+              <label for="zonas-edad">Edad (si no la conoces)</label>
+              <span class="tool-input"><input id="zonas-edad" name="edad" type="text" inputmode="decimal" autocomplete="off"><span class="tool-unit">años</span></span>
+            </div>
+            <div class="tool-field">
+              <label for="zonas-reposo">FC en reposo (opcional)</label>
+              <span class="tool-input"><input id="zonas-reposo" name="reposo" type="text" inputmode="decimal" autocomplete="off"><span class="tool-unit">ppm</span></span>
+            </div>
+        </form>
+        <output class="tool-result" for="zonas-fcmax zonas-edad zonas-reposo" aria-live="polite">Escribe tu FC máxima o tu edad.</output>
+        <section class="ficha-block">
+          <h3>Cómo se calcula</h3>
+          <p>Usamos la clasificación de la intensidad del <a href="glosario.html#acsm">ACSM</a> (<a href="https://pubmed.ncbi.nlm.nih.gov/21694556/">Garber et al., 2011</a>): muy ligera (menos del 57 % de la FC máx), ligera (57–63 %), moderada (64–76 %), vigorosa (77–95 %) y casi máxima o máxima (96 % o más). El ACSM no las numera: las llamamos zonas 1 a 5 para que sea más fácil referirse a ellas.</p>
+          <p>Si pones tu FC en reposo, usa los porcentajes de la FC de reserva de la misma clasificación (menos del 30 %, 30–39 %, 40–59 %, 60–89 % y 90 % o más) y les suma tu pulso en reposo. Sin FC máxima, la estimamos con 208 − 0,7 × edad (<a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a>).</p>
+        </section>
+        <section class="ficha-block">
+          <h3>Límites</h3>
+          <p>Son porcentajes fijos, iguales para todo el mundo, y el cuerpo no funciona así: en 100 personas, el <a href="glosario.html#umbral-de-lactato">umbral de lactato</a> salió entre el 60 y el 90 % de la FC máx según la persona (<a href="https://pubmed.ncbi.nlm.nih.gov/31479001/">Iannetta et al., 2020</a>). Por eso dos personas en la misma «zona» pueden estar haciendo esfuerzos muy distintos.</p>
+          <p>Tómalo como una guía para empezar. Para afinar, lo mejor son zonas basadas en tus umbrales medidos en una prueba de esfuerzo. Si la FC máx es estimada, suma además su error de unos 11 ppm.</p>
+        </section>
+        <details class="fuentes">
+          <summary>Referencias</summary>
+          <ul>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/21694556/">Garber et al., 2011</a> Med Sci Sports Exerc. Posicionamiento del ACSM sobre ejercicio en adultos sanos, con la clasificación de la intensidad.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31479001/">Iannetta et al., 2020</a> Med Sci Sports Exerc. 100 personas: dónde caen sus umbrales respecto a los porcentajes fijos.</li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a> J Am Coll Cardiol. Fórmula para estimar la FC máxima.</li>
           </ul>
         </details>
       </article>

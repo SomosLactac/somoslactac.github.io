@@ -10,7 +10,7 @@
   <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261107s">
+  <link rel="stylesheet" href="styles.css?v=20261107v">
   <script>
     document.documentElement.classList.add("js");
     setTimeout(function () {
@@ -20,7 +20,7 @@
   <script defer src="lib/gsap.min.js?v=20261105"></script>
   <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
   <script defer src="lib/manifest.js?v=20261107"></script>
-  <script defer src="main.js?v=20261107d"></script>
+  <script defer src="main.js?v=20261107f"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -55,6 +55,7 @@
       <a href="#acsm">ACSM</a>
       <a href="#agujetas">Agujetas</a>
       <a href="#fc-max">Frecuencia cardiaca máxima</a>
+      <a href="#fc-reserva">Frecuencia cardiaca de reserva</a>
       <a href="#glucogeno">Glucógeno</a>
       <a href="#hipertrofia">Hipertrofia</a>
       <a href="#lactato">Lactato</a>
@@ -93,6 +94,13 @@
         <div class="term-body">
           <p>La frecuencia cardiaca más alta que alcanzas en un esfuerzo máximo. Baja con la edad y se puede estimar con fórmulas, aunque con un error de unos 11 latidos por minuto, así que lo más fiable es medirla en una prueba de esfuerzo. Se usa, por ejemplo, para calcular las <a href="#zonas-de-entrenamiento">zonas de entrenamiento</a>.</p>
           <p class="term-meta">Fuente: <a href="https://pubmed.ncbi.nlm.nih.gov/11153730/">Tanaka et al., 2001</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/22376273/">Nes et al., 2013</a> · Pilar: <a href="aprende.html#energia">Energía y motor</a></p>
+        </div>
+      </article>
+      <article class="term" id="fc-reserva">
+        <h2>Frecuencia cardiaca de reserva</h2>
+        <div class="term-body">
+          <p>La diferencia entre tu <a href="#fc-max">frecuencia cardiaca máxima</a> y tu frecuencia cardiaca en reposo. Calcular la intensidad como un porcentaje de la reserva, sumándole luego el pulso en reposo, tiene en cuenta cómo está tu pulso en reposo.</p>
+          <p class="term-meta">Fuente: <a href="https://pubmed.ncbi.nlm.nih.gov/21694556/">Garber et al., 2011</a> · Pilar: <a href="aprende.html#energia">Energía y motor</a></p>
         </div>
       </article>
       <article class="term" id="glucogeno">
@@ -155,7 +163,8 @@
         <h2>Zonas de entrenamiento</h2>
         <div class="term-body">
           <p>Rangos de intensidad que se usan para planificar el entrenamiento. Una forma habitual de delimitarlas es con los dos umbrales de lactato: por debajo del primero, entre los dos y por encima del segundo.</p>
-          <p class="term-meta">Fuente: <a href="https://pubmed.ncbi.nlm.nih.gov/19453206/">Faude et al., 2009</a> · Pilar: <a href="aprende.html#energia">Energía y motor</a></p>
+          <p>También se usan porcentajes fijos de la <a href="#fc-max">frecuencia cardiaca máxima</a>, más fáciles de calcular pero menos precisos, porque los umbrales caen a porcentajes distintos en cada persona.</p>
+          <p class="term-meta">Fuente: <a href="https://pubmed.ncbi.nlm.nih.gov/19453206/">Faude et al., 2009</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/21694556/">Garber et al., 2011</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/31479001/">Iannetta et al., 2020</a> · Pilar: <a href="aprende.html#energia">Energía y motor</a></p>
         </div>
       </article>
     </section>
