@@ -269,6 +269,27 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .pillar-card p { color: var(--gray); }
 .pillar-count { margin-top: auto; padding-top: 8px; color: var(--lime); }
 
+/* Fotos de los pilares: en gris y oscurecidas para que manden el texto y el lima */
+.pillar-photo {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
+  background: var(--graphite);
+  filter: grayscale(.85) contrast(1.08) brightness(.78);
+  transition: filter .4s;
+}
+.pillar-text .pillar-photo { margin-top: 28px; border-bottom: 3px solid var(--lime); }
+.pillar-card { --card-pad: clamp(22px, 3vw, 36px); }
+.pillar-card .pillar-photo {
+  width: calc(100% + var(--card-pad) * 2); max-width: none;
+  margin: calc(var(--card-pad) * -1) calc(var(--card-pad) * -1) 6px;
+}
+@media (hover: hover) { .pillar-card:hover .pillar-photo { filter: grayscale(.2) contrast(1.05) brightness(.85); } }
+
+/* Vídeo corto en bucle dentro de una ficha */
+.ficha-side { min-width: 0; display: grid; gap: 40px; align-content: center; }
+.clip { margin: 0; min-width: 0; }
+.clip video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--black); filter: grayscale(.6) contrast(1.05); }
+.clip figcaption { margin-top: 10px; font-family: var(--mono); font-size: .75rem; color: var(--gray); }
+
 /* Ficha dentro de un pilar con gráfica */
 .pillar > .ficha { grid-column: 1 / -1; }
 
@@ -420,6 +441,11 @@ a[href^="glosario.html#"], .term-body p:not(.term-meta) a[href^="#"] {
   .pillar { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(48px, 7vw, 96px); }
   .pillar-flip .pillar-text { order: 2; }
   .pillar-ficha { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  /* Adaptación no tiene gráfica propia: la foto va a la derecha del título */
+  .pillar-ficha > .pillar-text { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: clamp(48px, 7vw, 96px); align-items: center; }
+  .pillar-ficha > .pillar-text .pillar-photo { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; }
+  .pillar-ficha > .pillar-text h2 { align-self: end; }
+  .pillar-ficha > .pillar-text .covers { align-self: start; }
   .ficha { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(40px, 6vw, 80px); }
   .who { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(48px, 7vw, 96px); }
 }

@@ -1,1 +1,65 @@
-{}
+{
+  "actualizado": "2026-11-07",
+  "nota": "Cada foto o vídeo de la web tiene aquí su crédito. Se actualiza en el mismo cambio que añade, cambia o quita una imagen.",
+  "fotos": [
+    {
+      "archivo": "assets/photos/energia-800.webp, assets/photos/energia-1600.webp",
+      "titulo": "Remo en ergómetro",
+      "donde": "Portada (pilar Energía y motor) y Aprende",
+      "autor": "Victor Freitas",
+      "perfil": "https://unsplash.com/@victorfreitas",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/KkYWWpurqbE",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/adaptacion-800.webp, assets/photos/adaptacion-1600.webp",
+      "titulo": "Peso muerto con barra",
+      "donde": "Portada (pilar Adaptación) y Aprende",
+      "autor": "Victor Freitas",
+      "perfil": "https://unsplash.com/@victorfreitas",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/qZ-U9z4TQ6A",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/fatiga-800.webp, assets/photos/fatiga-1600.webp",
+      "titulo": "Corredor sentado en la pista",
+      "donde": "Portada (pilar Fatiga y recuperación) y Aprende",
+      "autor": "Elisa Kennemer",
+      "perfil": "https://unsplash.com/@elisalou",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/OHmYjiiaOvs",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/combustible-800.webp, assets/photos/combustible-1600.webp",
+      "titulo": "Ciclista bebiendo de su bidón",
+      "donde": "Portada (pilar Combustible) y Aprende",
+      "autor": "Viktor Bystrov",
+      "perfil": "https://unsplash.com/@xokvictor",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/fePxEOOOXo0",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    }
+  ],
+  "videos": [
+    {
+      "archivo": "assets/video/sentadilla.mp4, assets/video/sentadilla-poster.webp",
+      "titulo": "Sentadilla con barra",
+      "donde": "aprende.html#mismo-peso",
+      "autor": "Tima Miroshnichenko",
+      "perfil": "https://www.pexels.com/@tima-miroshnichenko/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/video/side-view-of-a-man-doing-barbell-squats-5319759/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/",
+      "edicion": "Fragmento de 8 s (del segundo 1 al 9), sin sonido, a 960 px"
+    }
+  ],
+  "propias": []
+}

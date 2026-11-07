@@ -179,11 +179,26 @@
     });
   }
 
+  // Vídeos en bucle: solo se cargan y se mueven en pantallas de 720 px o más, cuando están a la vista
+  // y si no se ha pedido reducir el movimiento. En móvil se queda la imagen fija (poster).
+  function initClips() {
+    if (reduced || !window.IntersectionObserver || !matchMedia("(min-width: 720px)").matches) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else v.pause();
+      });
+    }, { threshold: 0.25 });
+    $$("video[data-autoplay]").forEach(function (v) { v.preload = "auto"; io.observe(v); });
+  }
+
   function boot() {
     safe(initNav, "initNav");
     safe(initMenu, "initMenu");
     safe(initTools, "initTools");
     safe(initMessageForms, "initMessageForms");
+    safe(initClips, "initClips");
 
     if (!reduced && window.gsap && window.ScrollTrigger) {
       try { gsap.registerPlugin(ScrollTrigger); } catch (_) {}
