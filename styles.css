@@ -359,9 +359,34 @@ a[href^="glosario.html#"], .term-body p:not(.term-meta) a[href^="#"] {
   filter: grayscale(.85) contrast(1.08) brightness(.78);
 }
 .term-photo { max-width: 420px; margin-block: 6px 4px; border-bottom: 3px solid var(--lime); }
+
+/* Esquemas del glosario para los términos sin foto: misma caja que las fotos */
+.term-figure { margin: 6px 0 4px; max-width: 420px; aspect-ratio: 16 / 9; background: var(--graphite); border-bottom: 3px solid var(--lime); }
+.term-chart { display: block; width: 100%; height: 100%; }
+.term-chart text { font-family: var(--mono); font-size: 14px; fill: var(--bone); }
+.term-chart .tc-accent { fill: var(--lime); }
+.term-chart .tc-big { font-size: 20px; font-weight: 700; }
+.term-chart .tc-note { font-size: 11px; fill: var(--gray); }
+.term-chart .axis { stroke-width: 1.5; }
+.tc-curve { fill: none; stroke: var(--lime); stroke-width: 5; stroke-linecap: round; }
+.tc-dot { fill: var(--black); stroke: var(--lime); stroke-width: 4; }
+.tc-dot-soft { stroke: var(--bone); }
+.tc-box { fill: var(--black); stroke: var(--gray); stroke-width: 1.5; }
+.tc-key { stroke: var(--lime); stroke-width: 2.5; }
+.tc-arrow { fill: none; stroke: var(--gray); stroke-width: 2; marker-end: url(#tc-head); }
+.tc-track { stroke: var(--line); stroke-width: 10; stroke-linecap: round; }
+.tc-reserve { stroke: var(--lime); stroke-width: 10; stroke-linecap: round; }
+.tc-bracket { fill: none; stroke: var(--lime); stroke-width: 2; }
+.tc-dash { stroke: var(--gray); stroke-width: 1.5; stroke-dasharray: 4 5; }
+@media (max-width: 719px) {
+  /* En móvil el esquema se reduce: la letra sube para seguir legible */
+  .term-chart text { font-size: 17px; }
+  .term-chart .tc-big { font-size: 22px; }
+  .term-chart .tc-note { font-size: 13px; }
+}
 @media (min-width: 960px) {
   .term > h2 { grid-column: 1; grid-row: 1; }
-  .term-photo { grid-column: 1; grid-row: 2; align-self: start; }
+  .term-photo, .term-figure { grid-column: 1; grid-row: 2; align-self: start; }
   .term > .term-body { grid-column: 2; grid-row: 1 / span 2; }
 }
 .study { --card-pad: clamp(22px, 3vw, 36px); }
