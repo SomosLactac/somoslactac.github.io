@@ -113,7 +113,7 @@
         var e = num(f, "edad");
         if (e === null) return [null, "Escribe tu edad."];
         if (!(e >= 18 && e <= 90)) return [false, "La fórmula es para adultos: escribe una edad entre 18 y 90 años."];
-        return [true, "<strong>" + fmt(208 - 0.7 * e, 0) + " ppm</strong>Frecuencia cardiaca máxima estimada (Tanaka)<br>Con la fórmula de Nes: " + fmt(211 - 0.64 * e, 0) + " ppm"];
+        return [true, "<strong>" + fmt(208 - 0.7 * e, 0) + " ppm</strong>Frecuencia cardíaca máxima estimada (Tanaka)<br>Con la fórmula de Nes: " + fmt(211 - 0.64 * e, 0) + " ppm"];
       },
       // Clasificación de la intensidad del ACSM (Garber et al., 2011): % FC máx y % FC de reserva.
       zonas: function (f) {
