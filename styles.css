@@ -352,6 +352,24 @@ a[href^="glosario.html#"], .term-body p:not(.term-meta) a[href^="#"] {
 .term-meta { margin-top: 12px; font-family: var(--mono); font-size: .8em; color: var(--gray); }
 @media (min-width: 960px) { .term { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); } }
 
+/* Fotos del glosario y de los estudios: mismo tratamiento que las de los pilares */
+.term-photo, .study-photo {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
+  background: var(--graphite);
+  filter: grayscale(.85) contrast(1.08) brightness(.78);
+}
+.term-photo { max-width: 420px; margin-block: 6px 4px; border-bottom: 3px solid var(--lime); }
+@media (min-width: 960px) {
+  .term > h2 { grid-column: 1; grid-row: 1; }
+  .term-photo { grid-column: 1; grid-row: 2; align-self: start; }
+  .term > .term-body { grid-column: 2; grid-row: 1 / span 2; }
+}
+.study { --card-pad: clamp(22px, 3vw, 36px); }
+.study-photo {
+  width: calc(100% + var(--card-pad) * 2); max-width: none;
+  margin: calc(var(--card-pad) * -1) calc(var(--card-pad) * -1) 18px;
+}
+
 .who { padding-block: var(--gap-section) 0; display: grid; gap: 24px; }
 .who-text { min-width: 0; }
 .who-text p { max-width: 34em; margin-bottom: 14px; }

@@ -45,6 +45,138 @@
       "original": "https://unsplash.com/photos/fePxEOOOXo0",
       "licencia": "Licencia de Unsplash",
       "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/1rm-800.webp, assets/photos/1rm-480.webp",
+      "titulo": "Peso muerto en competición",
+      "donde": "Glosario: 1RM",
+      "autor": "charles walton",
+      "perfil": "https://www.pexels.com/@charles-walton-782833960/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/man-in-dead-lift-competition-19029103/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/agujetas-800.webp, assets/photos/agujetas-480.webp",
+      "titulo": "Deportista sujetándose el gemelo",
+      "donde": "Glosario: agujetas",
+      "autor": "Kindel Media",
+      "perfil": "https://www.pexels.com/@kindelmedia/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/a-person-wearing-rubber-shoes-7298422/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/fc-max-800.webp, assets/photos/fc-max-480.webp",
+      "titulo": "Monitor con el trazado del pulso",
+      "donde": "Glosario: frecuencia cardiaca máxima",
+      "autor": "Joshua Chehov",
+      "perfil": "https://unsplash.com/@joshua_chehov",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/ZSo4axN3ZXI",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/glucogeno-800.webp, assets/photos/glucogeno-480.webp",
+      "titulo": "Plato de espaguetis",
+      "donde": "Glosario: glucógeno",
+      "autor": "Maurijn Pach",
+      "perfil": "https://www.pexels.com/@maurijn-pach-166875/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/shallow-focus-photo-of-pasta-546945/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/hipertrofia-800.webp, assets/photos/hipertrofia-480.webp",
+      "titulo": "Brazo levantando una mancuerna",
+      "donde": "Glosario: hipertrofia",
+      "autor": "Tima Miroshnichenko",
+      "perfil": "https://www.pexels.com/@tima-miroshnichenko/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/close-up-shot-of-man-s-muscles-5327571/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/sistemas-energeticos-800.webp, assets/photos/sistemas-energeticos-480.webp",
+      "titulo": "Velocista en los tacos de salida",
+      "donde": "Glosario: sistemas energéticos",
+      "autor": "Braden Collum",
+      "perfil": "https://unsplash.com/@bradencollum",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/9HI8UJMSdZA",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/sobrecarga-progresiva-800.webp, assets/photos/sobrecarga-progresiva-480.webp",
+      "titulo": "Discos de distintos pesos",
+      "donde": "Glosario: sobrecarga progresiva",
+      "autor": "Victor Freitas",
+      "perfil": "https://unsplash.com/@victorfreitas",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/JbI04nYfaJk",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/sobreentrenamiento-800.webp, assets/photos/sobreentrenamiento-480.webp",
+      "titulo": "Deportista agotado con las manos en la cabeza",
+      "donde": "Glosario: sobreentrenamiento",
+      "autor": "Tima Miroshnichenko",
+      "perfil": "https://www.pexels.com/@tima-miroshnichenko/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/sweaty-man-with-his-hand-on-his-head-6390229/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/vo2-max-800.webp, assets/photos/vo2-max-480.webp",
+      "titulo": "Ciclista con máscara de análisis de gases",
+      "donde": "Glosario: VO2 máx",
+      "autor": "VO2 Master",
+      "perfil": "https://www.pexels.com/@vo2-master-1061578389/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/female-cyclist-in-a-face-mask-20523360/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/zonas-800.webp, assets/photos/zonas-480.webp",
+      "titulo": "Reloj deportivo midiendo la frecuencia cardiaca",
+      "donde": "Glosario: zonas de entrenamiento",
+      "autor": "Nik",
+      "perfil": "https://unsplash.com/@helloimnik",
+      "banco": "Unsplash",
+      "original": "https://unsplash.com/photos/BR8MqYyOPiU",
+      "licencia": "Licencia de Unsplash",
+      "licencia_url": "https://unsplash.com/license"
+    },
+    {
+      "archivo": "assets/photos/bassett-2000-1200.webp, assets/photos/bassett-2000-640.webp",
+      "titulo": "Prueba de esfuerzo en bicicleta con análisis de gases",
+      "donde": "Estudios: «¿Qué limita el VO2 máx…?» (Bassett y Howley, 2000)",
+      "autor": "VO2 Master",
+      "perfil": "https://www.pexels.com/@vo2-master-1061578389/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/athletes-wearing-an-athletic-performance-analyzer-masks-and-training-20523368/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
+    },
+    {
+      "archivo": "assets/photos/iannetta-2020-1200.webp, assets/photos/iannetta-2020-640.webp",
+      "titulo": "Tableta con datos de una prueba de esfuerzo",
+      "donde": "Estudios: «¿Los porcentajes fijos de la FC máx…?» (Iannetta et al., 2020)",
+      "autor": "VO2 Master",
+      "perfil": "https://www.pexels.com/@vo2-master-1061578389/",
+      "banco": "Pexels",
+      "original": "https://www.pexels.com/photo/man-with-training-date-on-tablet-20523364/",
+      "licencia": "Licencia de Pexels",
+      "licencia_url": "https://www.pexels.com/license/"
     }
   ],
   "videos": [
