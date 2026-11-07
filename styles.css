@@ -234,6 +234,12 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .subnav a { display: block; padding-block: 11px; color: var(--gray); text-decoration: none; transition: color .2s; }
 @media (hover: hover) { .subnav a:hover { color: var(--lime); } }
 
+/* Lo último en la portada */
+.latest { padding-block: var(--gap-section) 0; }
+.latest h2 { margin-bottom: clamp(28px, 4vw, 48px); }
+.latest-meta { font-family: var(--mono); font-size: .85em; color: var(--lime); }
+.latest-btn { margin-top: 10px; }
+
 /* Los cuatro pilares en la portada */
 .pillars-home { padding-block: var(--gap-section) 0; }
 .pillars-home h2 { margin-bottom: clamp(28px, 4vw, 48px); }
