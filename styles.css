@@ -269,6 +269,22 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .soon h2 { margin-bottom: 14px; }
 .soon p { margin-bottom: 26px; }
 
+.join { display: grid; gap: 40px; padding-block: var(--gap-section); scroll-margin-top: 40px; }
+.join h2 { margin-bottom: 28px; }
+.join-list { display: grid; gap: 12px; padding: 0; list-style: none; }
+.join-list li { padding-left: 22px; position: relative; }
+.join-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 10px; height: 2px; background: var(--lime); }
+.join-note { max-width: 36em; margin-top: 24px; color: var(--gray); font-size: .9em; }
+.join-form { display: grid; gap: 14px; align-content: start; padding: clamp(22px, 3vw, 40px); background: var(--graphite); border: 1px solid var(--line); }
+.join-form > label { font-family: var(--mono); font-size: .85em; }
+.join-form input[type="email"] { width: 100%; min-height: 52px; padding: 12px 14px; font: inherit; color: var(--bone); background: var(--black); border: 1px solid var(--line); border-radius: 0; }
+.join-form input[type="email"]::placeholder { color: var(--gray); }
+.join-form .join-consent { display: flex; gap: 12px; align-items: flex-start; padding-block: 4px; font-family: var(--body); font-size: .92em; line-height: 1.45; cursor: pointer; }
+.join-consent input { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--lime); }
+.join-form .btn { width: 100%; border: 0; font-family: inherit; font-size: inherit; cursor: pointer; }
+.join-small { color: var(--gray); font-size: .85em; }
+.join-check { display: none; } /* Campo trampa de Brevo contra bots: debe quedar vacío */
+
 .footer { background: var(--black); border-top: 1px solid var(--line); padding: 40px 0 48px; font-size: .9em; }
 .footer-inner { display: grid; gap: 10px; }
 .footer-inner p { max-width: 42em; }
@@ -317,6 +333,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
   .hero { min-height: 0; }
 }
 @media (min-width: 1024px) {
+  .join { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(48px, 7vw, 120px); align-items: start; }
   /* La curva queda detrás del título y se dispara a su derecha */
   .hero { justify-content: flex-end; padding-bottom: 40px; }
   .hero-text { position: relative; z-index: 1; padding-bottom: max(64px, 14vh); }
