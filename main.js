@@ -155,10 +155,35 @@
     });
   }
 
+  // Formularios de mensajes (Contacto y Glosario): se envían a Google Forms sin salir de la página.
+  // Google no deja leer la respuesta (no-cors), así que se da por enviado si la petición sale.
+  function initMessageForms() {
+    $$("form[data-msg-form]").forEach(function (form) {
+      var status = $(".msg-status", form);
+      var button = $("button[type=submit]", form);
+      form.addEventListener("submit", function (e) {
+        if (!window.fetch || !window.URLSearchParams || !window.FormData) return; // envío normal a Google
+        e.preventDefault();
+        button.disabled = true;
+        status.textContent = "Enviando…";
+        fetch(form.action, { method: "POST", mode: "no-cors", body: new URLSearchParams(new FormData(form)) })
+          .then(function () {
+            form.reset();
+            status.textContent = "¡Recibido! Gracias por escribir.";
+          })
+          .catch(function () {
+            status.textContent = "No se ha podido enviar. Prueba otra vez o escribe a lactac.es@gmail.com.";
+          })
+          .then(function () { button.disabled = false; });
+      });
+    });
+  }
+
   function boot() {
     safe(initNav, "initNav");
     safe(initMenu, "initMenu");
     safe(initTools, "initTools");
+    safe(initMessageForms, "initMessageForms");
 
     if (!reduced && window.gsap && window.ScrollTrigger) {
       try { gsap.registerPlugin(ScrollTrigger); } catch (_) {}

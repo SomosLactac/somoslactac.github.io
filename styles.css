@@ -347,8 +347,13 @@ a[href^="glosario.html#"], .term-body p:not(.term-meta) a[href^="#"] {
 .join-note { max-width: 36em; margin-top: 24px; color: var(--gray); font-size: .9em; }
 .join-form { display: grid; gap: 14px; align-content: start; padding: clamp(22px, 3vw, 40px); background: var(--graphite); border: 1px solid var(--line); }
 .join-form > label { font-family: var(--mono); font-size: .85em; }
-.join-form input[type="email"] { width: 100%; min-height: 52px; padding: 12px 14px; font: inherit; color: var(--bone); background: var(--black); border: 1px solid var(--line); border-radius: 0; }
+.join-form input[type="email"], .join-form input[type="text"], .join-form textarea { width: 100%; min-height: 52px; padding: 12px 14px; font: inherit; color: var(--bone); background: var(--black); border: 1px solid var(--line); border-radius: 0; }
 .join-form input[type="email"]::placeholder { color: var(--gray); }
+.join-form textarea { min-height: 150px; resize: vertical; line-height: 1.5; }
+.msg-form { margin-top: 28px; max-width: 34em; }
+.msg-opt { color: var(--gray); }
+.msg-form .btn:disabled { opacity: .6; cursor: progress; }
+.msg-status:empty { display: none; }
 .join-form .join-consent { display: flex; gap: 12px; align-items: flex-start; padding-block: 4px; font-family: var(--body); font-size: .92em; line-height: 1.45; cursor: pointer; }
 .join-consent input { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--lime); }
 .join-form .btn { width: 100%; border: 0; font-family: inherit; font-size: inherit; cursor: pointer; }

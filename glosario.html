@@ -10,7 +10,7 @@
   <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261107v">
+  <link rel="stylesheet" href="styles.css?v=20261107w">
   <script>
     document.documentElement.classList.add("js");
     setTimeout(function () {
@@ -20,7 +20,7 @@
   <script defer src="lib/gsap.min.js?v=20261105"></script>
   <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
   <script defer src="lib/manifest.js?v=20261107"></script>
-  <script defer src="main.js?v=20261107f"></script>
+  <script defer src="main.js?v=20261107g"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -43,7 +43,7 @@
   <main id="contenido">
     <section class="page-head wrap">
       <h1 class="page-title">Glosario</h1>
-      <p class="page-intro">Los conceptos que salen en Lactac, explicados en pocas líneas y con su fuente. En toda la web, las palabras con subrayado de puntos lima te traen aquí.</p>
+      <p class="page-intro">Los conceptos que salen en Lactac, explicados en pocas líneas y con su fuente. En toda la web, las palabras con subrayado de puntos lima te traen aquí. Si echas algo en falta, <a href="#sugerencias">cuéntamelo</a>.</p>
       <svg class="chart page-curve" data-chart="load" viewBox="0 0 1000 120" aria-hidden="true" focusable="false">
         <line class="axis" x1="0" y1="112" x2="1000" y2="112"/>
         <path class="draw curve" pathLength="1" d="M0 104 C 260 102, 480 100, 620 92 C 740 84, 820 60, 880 36 S 960 10, 995 6"/>
@@ -168,6 +168,29 @@
         </div>
       </article>
     </section>
+
+    <section class="who wrap" id="sugerencias">
+      <h2>¿Falta algo?</h2>
+      <div class="who-text">
+        <p>Si echas en falta un término, algo no se entiende o tienes una duda, cuéntamelo. Las dudas se responden de forma general.</p>
+        <!-- Formulario «Lactac – Mensajes» de Google Forms (cuenta lactac.es@gmail.com), con el diseño de la web. -->
+        <form class="join-form msg-form" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSfaheMlQGXaukjT9jE7rR_QMqGirmXV__YGM590xr5r7YYPrg/formResponse" data-msg-form>
+          <input type="hidden" name="entry.370414593" value="Sugerencia del glosario">
+          <label for="s-nombre">Nombre <span class="msg-opt">(opcional)</span></label>
+          <input id="s-nombre" name="entry.1363000573" type="text" autocomplete="name" maxlength="100">
+          <label for="s-correo">Correo <span class="msg-opt">(si quieres respuesta)</span></label>
+          <input id="s-correo" name="entry.821769185" type="email" autocomplete="email" placeholder="tu@correo.com" maxlength="200">
+          <label for="s-mensaje">Tu sugerencia o duda</label>
+          <textarea id="s-mensaje" name="entry.668562280" rows="6" maxlength="3000" required></textarea>
+          <label class="join-consent">
+            <input type="checkbox" required>
+            <span>He leído la <a href="privacidad.html">política de privacidad</a>.</span>
+          </label>
+          <button class="btn" type="submit">Enviar sugerencia</button>
+          <p class="join-small msg-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
     <div class="page-end"></div>
   </main>
 
@@ -175,7 +198,7 @@
     <div class="wrap footer-inner">
       <img class="footer-logo" src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="Lactac" loading="lazy">
       <p class="footer-tagline">Entiende, aplica, progresa.</p>
-      <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a></p>
+      <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a> · <a href="https://www.tiktok.com/@lactac.es">TikTok: @lactac.es</a></p>
       <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
       <p class="footer-updated">Última actualización: 7 de noviembre de 2026.</p>
       <p class="footer-credits">
