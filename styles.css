@@ -300,6 +300,16 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .tools-note { margin-top: 18px; font-family: var(--mono); font-size: .8em; color: var(--gray); }
 
 /* Glosario */
+/* Palabras que llevan al glosario: subrayado de puntos lima */
+a[href^="glosario.html#"], .term-body p:not(.term-meta) a[href^="#"] {
+  text-decoration: underline dotted var(--lime);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .24em;
+  transition: color .2s;
+}
+@media (hover: hover) {
+  a[href^="glosario.html#"]:hover, .term-body p:not(.term-meta) a[href^="#"]:hover { color: var(--lime); }
+}
 .glossary { padding-top: clamp(32px, 4vw, 56px); }
 .term { display: grid; gap: 10px 48px; padding-block: 28px; border-top: 1px solid var(--line); }
 .term h2 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.12; letter-spacing: -.005em; }
