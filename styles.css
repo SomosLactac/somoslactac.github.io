@@ -261,6 +261,14 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 .pillar-card p { color: var(--gray); }
 .pillar-count { margin-top: auto; padding-top: 8px; color: var(--lime); }
 
+/* Glosario */
+.glossary { padding-top: clamp(32px, 4vw, 56px); }
+.term { display: grid; gap: 10px 48px; padding-block: 28px; border-top: 1px solid var(--line); }
+.term h2 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.12; letter-spacing: -.005em; }
+.term-body p { max-width: 40em; }
+.term-meta { margin-top: 12px; font-family: var(--mono); font-size: .8em; color: var(--gray); }
+@media (min-width: 960px) { .term { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); } }
+
 .who { padding-block: var(--gap-section) 0; display: grid; gap: 24px; }
 .who-text { min-width: 0; }
 .who-text p { max-width: 34em; margin-bottom: 14px; }
