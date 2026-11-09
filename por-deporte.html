@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Por deporte: Lactac</title>
+  <meta name="description" content="La fisiología de tu deporte con sus fuentes a la vista: qué decide tu ritmo al correr y qué hace progresar en fuerza.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261109a">
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!(window.__BRAND__ && window.__BRAND__.booted)) document.documentElement.classList.remove("js");
+    }, 4000);
+  </script>
+  <script defer src="lib/gsap.min.js?v=20261105"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
+  <script defer src="lib/manifest.js?v=20261107"></script>
+  <script defer src="main.js?v=20261107i"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="index.html" aria-label="Lactac, ir al inicio">
+      <img src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
+    <nav class="nav-links" id="menu" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="aprende.html">Aprende</a>
+      <a href="por-deporte.html" aria-current="page">Por deporte</a>
+      <a href="estudios.html">Estudios</a>
+      <a href="glosario.html">Glosario</a>
+      <a href="herramientas.html">Herramientas</a>
+      <a href="sobre.html">Sobre Lactac</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="page-head wrap">
+      <h1 class="page-title">Por deporte</h1>
+      <p class="page-intro">Lo que la evidencia dice de tu deporte, con las fuentes a la vista y sin esconder lo que aún no se sabe.</p>
+      <svg class="chart page-curve" data-chart="load" viewBox="0 0 1000 120" aria-hidden="true" focusable="false">
+        <line class="axis" x1="0" y1="112" x2="1000" y2="112"/>
+        <path class="draw curve" pathLength="1" d="M0 104 C 260 102, 480 100, 620 92 C 740 84, 820 60, 880 36 S 960 10, 995 6"/>
+      </svg>
+    </section>
+
+    <nav class="subnav wrap" aria-label="Deportes">
+      <a href="#running">Running</a>
+      <a href="#fuerza">Fuerza</a>
+    </nav>
+
+    <section class="pillar sport wrap" id="running">
+      <div class="pillar-text">
+        <h2>Running</h2>
+        <p class="covers"><a href="glosario.html#vo2-max">VO2 máx</a>, <a href="glosario.html#umbral-de-lactato">umbral de lactato</a>, economía de carrera, <a href="glosario.html#zonas-de-entrenamiento">zonas</a>.</p>
+      </div>
+      <article class="ficha" id="ritmo-running">
+        <div class="ficha-text">
+          <h3>¿Qué decide tu ritmo al correr?</h3>
+          <section class="ficha-block">
+            <h4>Qué se sabe</h4>
+            <p>En resistencia pesan tres factores: el <a href="glosario.html#vo2-max">VO2 máx</a>, el <a href="glosario.html#umbral-de-lactato">umbral de lactato</a> y la eficiencia, que al correr se llama economía de carrera: la energía que cuesta ir a una velocidad (<a href="estudios.html#joyner-2008">Joyner y Coyle, 2008</a>).</p>
+            <p>La velocidad en el umbral reúne los tres y es el mejor predictor fisiológico en carrera de fondo (<a href="estudios.html#bassett-2000">Bassett y Howley, 2000</a>). La gran mayoría de los 32 estudios que lo analizaron encontraron una relación fuerte entre el umbral y el rendimiento de resistencia, sobre todo en carrera (<a href="estudios.html#faude-2009">Faude et al., 2009</a>).</p>
+            <p>Entre corredores de élite con un VO2 máx parecido, la economía predice mejor el rendimiento que el VO2 máx (<a href="estudios.html#saunders-2004">Saunders et al., 2004</a>).</p>
+          </section>
+          <section class="ficha-block ficha-apply" id="running-aplicar">
+            <h4>Cómo aplicarlo</h4>
+            <p>No midas tu progreso solo por el VO2 máx: mejorar el umbral y la economía también te hace más rápido. Para la economía, el entrenamiento de fuerza es una de las vías que se han estudiado (<a href="estudios.html#saunders-2004">Saunders et al., 2004</a>).</p>
+            <p>Toma las <a href="glosario.html#zonas-de-entrenamiento">zonas</a> por porcentaje de la <a href="glosario.html#fc-max">FC máx</a> como una orientación. En 100 personas, el umbral de lactato apareció entre el 60 y el 90 % de la FC máx según cada una (<a href="estudios.html#iannetta-2020">Iannetta et al., 2020</a>). Y si estimas tu FC máx con la edad, cuenta con un error típico de unos 11 latidos por minuto (<a href="estudios.html#nes-2013">Nes et al., 2013</a>).</p>
+          </section>
+          <section class="ficha-block">
+            <h4>Qué no se sabe</h4>
+            <p>Los datos de economía son de corredores entrenados o de élite, y suelen medirse en cinta, que no es igual que correr en la calle (<a href="estudios.html#saunders-2004">Saunders et al., 2004</a>). El entrenamiento interválico subió el VO2 máx en gente sedentaria o poco activa menor de 45 años (<a href="estudios.html#bacon-2013">Bacon et al., 2013</a>): no sabemos si se traslada igual a un amateur que ya entrena.</p>
+            <p>El estudio que muestra el problema de los porcentajes fijos tampoco propone un método sencillo para medir tu umbral fuera del laboratorio (<a href="estudios.html#iannetta-2020">Iannetta et al., 2020</a>). Y esta página no da un plan: aún no hemos revisado estudios sobre cómo repartir kilómetros e intensidades a lo largo de la semana.</p>
+          </section>
+          <details class="fuentes">
+            <summary>Fuentes</summary>
+            <ul>
+              <li><a href="estudios.html#joyner-2008">Joyner y Coyle, 2008.</a> J Physiol. VO2 máx, umbral y eficiencia en deportistas de élite.</li>
+              <li><a href="estudios.html#bassett-2000">Bassett y Howley, 2000.</a> Med Sci Sports Exerc. Qué decide el rendimiento de resistencia.</li>
+              <li><a href="estudios.html#faude-2009">Faude et al., 2009.</a> Sports Med. Validez de los umbrales de lactato.</li>
+              <li><a href="estudios.html#saunders-2004">Saunders et al., 2004.</a> Sports Med. Economía de carrera en corredores entrenados.</li>
+              <li><a href="estudios.html#bacon-2013">Bacon et al., 2013.</a> PLoS One. Metaanálisis: entrenamiento interválico y VO2 máx.</li>
+              <li><a href="estudios.html#iannetta-2020">Iannetta et al., 2020.</a> Med Sci Sports Exerc. Porcentajes fijos frente a umbrales medidos.</li>
+              <li><a href="estudios.html#nes-2013">Nes et al., 2013.</a> Scand J Med Sci Sports. FC máxima y edad.</li>
+            </ul>
+          </details>
+        </div>
+        <figure class="flow" aria-label="Esquema: el VO2 máx y el umbral de lactato marcan el oxígeno que puedes sostener; con la economía de carrera, eso da tu ritmo.">
+          <figcaption class="flow-title">Qué decide tu ritmo</figcaption>
+          <div class="flow-step"><span class="flow-box">VO2 máx</span><span class="flow-op" aria-hidden="true">×</span><span class="flow-box">Umbral de lactato</span></div>
+          <span class="flow-arrow" aria-hidden="true">↓</span>
+          <div class="flow-step"><span class="flow-box flow-mid">Oxígeno que puedes sostener</span><span class="flow-op" aria-hidden="true">×</span><span class="flow-box">Economía de carrera</span></div>
+          <span class="flow-arrow" aria-hidden="true">↓</span>
+          <div class="flow-step"><span class="flow-box flow-key">Tu ritmo</span></div>
+          <p class="bars-source">Esquema basado en <a href="estudios.html#joyner-2008">Joyner y Coyle, 2008</a></p>
+        </figure>
+      </article>
+      <div class="sport-more">
+        <p class="ficha-meta">Sigue por aquí</p>
+        <div class="pillar-cards">
+          <a class="pillar-card" href="aprende.html#vo2-max-todo">
+            <span class="pillar-num">Ficha</span>
+            <h3>¿El VO2 máx lo es todo?</h3>
+            <p>Qué marca el techo y qué más decide tu rendimiento.</p>
+          </a>
+          <a class="pillar-card" href="herramientas.html#zonas">
+            <span class="pillar-num">Herramienta</span>
+            <h3>Zonas por frecuencia cardíaca</h3>
+            <p>Entre qué pulsaciones está cada nivel de intensidad.</p>
+          </a>
+          <a class="pillar-card" href="herramientas.html#fc-max">
+            <span class="pillar-num">Herramienta</span>
+            <h3>Frecuencia cardíaca máxima</h3>
+            <p>Estimación con tu edad, con su margen de error.</p>
+          </a>
+          <a class="pillar-card" href="aprende.html#cafeina">
+            <span class="pillar-num">Ficha</span>
+            <h3>¿La cafeína mejora el rendimiento?</h3>
+            <p>Dosis estudiadas, hasta dónde es segura y cómo probarla.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillar sport wrap" id="fuerza">
+      <div class="pillar-text">
+        <h2>Fuerza</h2>
+        <p class="covers">Carga, volumen, <a href="glosario.html#sobrecarga-progresiva">sobrecarga progresiva</a>, <a href="glosario.html#1rm">1RM</a>, <a href="glosario.html#hipertrofia">hipertrofia</a>.</p>
+      </div>
+      <article class="ficha" id="progresar-fuerza">
+        <div class="ficha-text">
+          <h3>¿Qué te hace progresar en fuerza?</h3>
+          <section class="ficha-block">
+            <h4>Qué se sabe</h4>
+            <p>El posicionamiento de 2026 del <a href="glosario.html#acsm">ACSM</a> reúne 137 revisiones con más de 30 000 adultos sanos. La fuerza mejoró más con cargas altas (80 % del <a href="glosario.html#1rm">1RM</a> o más), recorrido completo, 2 o 3 series, el ejercicio al principio de la sesión y al menos 2 sesiones por semana. La <a href="glosario.html#hipertrofia">hipertrofia</a>, con 10 series o más por semana y con sobrecarga excéntrica. Llegar al fallo o periodizar no cambió los resultados de forma consistente (<a href="estudios.html#currier-2026">Currier et al., 2026</a>).</p>
+            <p>Subir el peso no es la única forma de progresar: en 43 personas que ya entrenaban, sumar repeticiones y subir el peso dieron resultados parecidos en 8 semanas (<a href="estudios.html#plotkin-2022">Plotkin et al., 2022</a>).</p>
+            <p>Las repeticiones que aguantas a un mismo porcentaje dependen del ejercicio: al 80 % del 1RM, unas 13 en prensa de piernas y unas 9 en press de banca (<a href="estudios.html#nuzzo-2024">Nuzzo et al., 2024</a>).</p>
+          </section>
+          <section class="ficha-block ficha-apply" id="fuerza-aplicar">
+            <h4>Cómo aplicarlo</h4>
+            <p>Si tu objetivo es la fuerza máxima, pon lo que quieres mejorar al principio de la sesión, con cargas altas, y entrena al menos 2 días por semana (<a href="estudios.html#currier-2026">Currier et al., 2026</a>).</p>
+            <p>Si te sobran una o dos repeticiones de las que buscas, sube el peso entre un 2 y un 10 % (<a href="estudios.html#acsm-2009">ACSM, 2009</a>). Sumar repeticiones es otra forma de progresar. Y no uses la misma tabla de porcentajes para todos los ejercicios.</p>
+          </section>
+          <section class="ficha-block">
+            <h4>Qué no se sabe</h4>
+            <p>El posicionamiento de 2026 resume revisiones, no ensayos uno a uno, y en su resumen no da un porcentaje concreto para subir la carga: el 2-10 % viene del de 2009 (<a href="estudios.html#currier-2026">Currier et al., 2026</a>). El estudio de sumar repeticiones duró 8 semanas y solo miró el tren inferior (<a href="estudios.html#plotkin-2022">Plotkin et al., 2022</a>).</p>
+            <p>Las repeticiones a cada porcentaje varían mucho entre personas, y faltan datos para tener tablas propias de más ejercicios (<a href="estudios.html#nuzzo-2024">Nuzzo et al., 2024</a>).</p>
+          </section>
+          <details class="fuentes">
+            <summary>Fuentes</summary>
+            <ul>
+              <li><a href="estudios.html#currier-2026">Currier et al., 2026.</a> Med Sci Sports Exerc. Posicionamiento del ACSM sobre entrenamiento de fuerza.</li>
+              <li><a href="estudios.html#plotkin-2022">Plotkin et al., 2022.</a> PeerJ. Subir peso o sumar repeticiones, con gente que ya entrenaba.</li>
+              <li><a href="estudios.html#nuzzo-2024">Nuzzo et al., 2024.</a> Sports Med. Repeticiones a cada porcentaje del 1RM.</li>
+              <li><a href="estudios.html#acsm-2009">ACSM, 2009.</a> Med Sci Sports Exerc. Subir un 2-10 % cuando sobran repeticiones.</li>
+            </ul>
+          </details>
+        </div>
+        <figure class="bars" data-bars>
+          <figcaption>Repeticiones al 80 % del 1RM</figcaption>
+          <div class="bar-row">
+            <span class="bar-label">Press de banca</span>
+            <span class="bar-track"><span class="bar" style="--v:69.2%"></span></span>
+            <span class="bar-value">≈ 9</span>
+          </div>
+          <div class="bar-row is-key">
+            <span class="bar-label">Prensa de piernas</span>
+            <span class="bar-track"><span class="bar" style="--v:100%"></span></span>
+            <span class="bar-value">≈ 13</span>
+          </div>
+          <p class="bars-source">Medias de grupo. Fuente: <a href="estudios.html#nuzzo-2024">Nuzzo et al., 2024</a></p>
+        </figure>
+      </article>
+      <div class="sport-more">
+        <p class="ficha-meta">Sigue por aquí</p>
+        <div class="pillar-cards">
+          <a class="pillar-card" href="aprende.html#mismo-peso">
+            <span class="pillar-num">Ficha</span>
+            <h3>¿Qué pasa si entrenas siempre con el mismo peso?</h3>
+            <p>Lo que cambia entre repetir la carga y subirla.</p>
+          </a>
+          <a class="pillar-card" href="herramientas.html#1rm">
+            <span class="pillar-num">Herramienta</span>
+            <h3>1RM estimado</h3>
+            <p>Tu máximo a partir de una serie, según el ejercicio.</p>
+          </a>
+          <a class="pillar-card" href="herramientas.html#cuanto-subir">
+            <span class="pillar-num">Herramienta</span>
+            <h3>Cuánto subir el peso</h3>
+            <p>El siguiente paso cuando te sobran repeticiones.</p>
+          </a>
+          <a class="pillar-card" href="aprende.html#agujetas">
+            <span class="pillar-num">Ficha</span>
+            <h3>¿Qué funciona de verdad contra las agujetas?</h3>
+            <p>Qué técnicas de recuperación las reducen y cuáles no.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <p class="tools-note">¿No está tu deporte? Irán entrando más, cada uno con sus propios estudios. <a href="sobre.html#contacto">Dinos cuál te falta</a>.</p>
+    </section>
+    <div class="page-end"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <img class="footer-logo" src="assets/logo/lactac-logo-transparente-para-fondo-oscuro.svg" width="5801" height="2433" alt="Lactac" loading="lazy">
+      <p class="footer-tagline">Entiende, aplica, progresa.</p>
+      <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a> · <a href="https://www.tiktok.com/@lactac.es">TikTok: @lactac.es</a></p>
+      <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
+      <p class="footer-updated">Última actualización: 9 de noviembre de 2026.</p>
+      <p class="footer-credits">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad y cookies</a>
+        <a href="creditos.html">Créditos fotográficos</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -305,6 +305,10 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacin
 /* Ficha dentro de un pilar con gráfica */
 .pillar > .ficha { grid-column: 1 / -1; }
 
+/* Por deporte */
+.sport > * { grid-column: 1 / -1; }
+.sport-more .ficha-meta { margin-bottom: 14px; }
+
 /* Esquema de flujo (sin datos) */
 .flow { min-width: 0; display: grid; gap: 10px; align-self: center; justify-items: center; font-family: var(--mono); font-size: .85em; }
 .flow-title { justify-self: start; margin-bottom: 6px; color: var(--bone); }
