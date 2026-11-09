@@ -105,6 +105,16 @@ img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 a { color: inherit; text-underline-offset: .18em; }
 p { text-wrap: pretty; }
+/* Texto corrido justificado desde 720 px, con guiones para que no queden huecos grandes. En móvil va a la izquierda porque las líneas cortas abren huecos. Las etiquetas y listas de enlaces siguen a la izquierda. */
+@media (min-width: 720px) {
+  main p:not(.news-tag, .ficha-meta, .bars-source, .covers, .study-uses),
+  main li:not(.news-item),
+  .footer p {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
 h1, h2, h3 { text-wrap: balance; font-family: var(--display); font-weight: 900; font-stretch: 125%; }
 h2 { font-size: clamp(1.8rem, 5vw, 3.9rem); line-height: 1.04; letter-spacing: -.015em; }
 h3 { font-size: clamp(1.25rem, 2.1vw, 1.75rem); line-height: 1.14; letter-spacing: -.005em; }
