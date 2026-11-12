@@ -528,3 +528,54 @@ a[href^="glosario.html#"], .term-body p:not(.term-meta) a[href^="#"] {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* =============================================================
+   8. Lac, la mascota (lac.js). Sin JavaScript no se ve.
+   ============================================================= */
+.lac {
+  display: none; position: absolute; z-index: 2;
+  height: var(--lac-h, 140px); aspect-ratio: 40 / 65;
+  padding: 0; border: 0; background: none; color: inherit; font: inherit;
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+  opacity: 0; transform: translateY(14px) scale(.92); transform-origin: 50% 94%;
+  transition: opacity .45s, transform .6s cubic-bezier(.34, 1.56, .64, 1);
+}
+.has-lac .lac { display: block; }
+.lac.is-in { opacity: 1; transform: none; }
+.lac svg { display: block; width: 100%; height: 100%; max-width: none; overflow: visible; }
+.lac:focus-visible { outline: 2px dashed var(--lime); outline-offset: 6px; }
+.lac-bubble {
+  position: absolute; right: 74%; top: 0; width: max-content; max-width: min(240px, 60vw);
+  padding: 10px 14px; background: var(--graphite); border: 1px solid var(--lime); color: var(--bone);
+  font-family: var(--mono); font-size: 14px; line-height: 1.4; text-align: left;
+  opacity: 0; transform: translateY(6px); transition: opacity .25s, transform .25s; pointer-events: none;
+}
+.lac-bubble::after { content: ""; position: absolute; right: -8px; top: 18px; width: 14px; height: 14px; background: var(--graphite); border: solid var(--lime); border-width: 1px 1px 0 0; transform: rotate(45deg); }
+.lac-bubble.is-on { opacity: 1; transform: none; }
+.lac-sigue .lac-bubble { top: -6px; }
+
+.lac-hero { --lac-h: 150px; }
+.page-head { position: relative; }
+.lac-page { --lac-h: clamp(110px, 12vw, 190px); }
+.has-lac .page-head:has(.lac) .page-curve { margin-top: calc(var(--lac-h-page, clamp(110px, 12vw, 190px)) * .75); }
+.pillar-card { position: relative; }
+.lac-card { --lac-h: clamp(96px, 9vw, 128px); pointer-events: none; }
+.join-form { position: relative; }
+.lac-join { --lac-h: 120px; }
+.has-lac .join-form:has(.lac) { margin-top: 112px; }
+@media (min-width: 1024px) {
+  .lac-hero { --lac-h: clamp(190px, 34vh, 340px); }
+  .lac-join { --lac-h: 140px; }
+  .has-lac .join-form:has(.lac) { margin-top: 64px; }
+}
+/* El acompañante: fijo en la esquina mientras se hace scroll */
+.lac-sigue {
+  position: fixed; z-index: 40; left: auto; top: auto;
+  right: max(10px, calc(var(--edge) - 36px)); bottom: 10px;
+  --lac-h: 96px; pointer-events: none; transform: translateY(120%);
+}
+.lac-sigue.is-in { pointer-events: auto; transform: none; }
+@media (min-width: 1024px) { .lac-sigue { --lac-h: 150px; bottom: 16px; } }
+@media (prefers-reduced-motion: reduce) {
+  .lac, .lac-bubble { transition: none; }
+}

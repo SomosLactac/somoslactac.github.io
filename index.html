@@ -11,7 +11,7 @@
   <link rel="icon" href="assets/logo/lactac-favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/logo/lactac-favicon.png">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-900-wdth125-latin.woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261109d">
+  <link rel="stylesheet" href="styles.css?v=20261112b">
   <script>
     document.documentElement.classList.add("js");
     setTimeout(function () {
@@ -22,6 +22,7 @@
   <script defer src="lib/ScrollTrigger.min.js?v=20261105"></script>
   <script defer src="lib/manifest.js?v=20261107"></script>
   <script defer src="main.js?v=20261107i"></script>
+  <script defer src="lac.js?v=20261112b"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -71,6 +72,10 @@
         <text x="995" y="552" text-anchor="end">Intensidad</text>
         <text x="0" y="552">Esquema, no son datos reales</text>
       </svg>
+      <button class="lac lac-hero" type="button" data-lac="normal" data-lac-on="chart:760,520" data-lac-delay="1300" data-lac-hello="¡Hola! Soy Lac."
+        data-lac-cycle="senala,corre,piensa,pulgar,curl,celebra"
+        data-lac-says="Esta es la curva de lactato.|Pasado el umbral, se dispara.|Aquí cada dato lleva su fuente.|Si no se sabe, te lo digo.|Entiende, aplica…|¡…y progresa!"
+        aria-label="Lac, la mascota de Lactac. Púlsalo para que hable."></button>
     </section>
 
     <section class="latest wrap">
@@ -106,6 +111,7 @@
       <h2>Cuatro pilares</h2>
       <div class="pillar-cards">
         <a class="pillar-card" href="aprende.html#energia">
+          <span class="lac lac-card" data-lac="normal" data-lac-on="img" data-lac-hover="corre" aria-hidden="true"></span>
           <img class="pillar-photo" src="assets/photos/energia-800.webp" srcset="assets/photos/energia-800.webp 800w, assets/photos/energia-1600.webp 1600w" sizes="(min-width: 720px) 50vw, 100vw" width="800" height="450" alt="" loading="lazy" decoding="async">
           <span class="pillar-num">01</span>
           <h3>Energía y motor</h3>
@@ -113,6 +119,7 @@
           <span class="pillar-count">1 ficha</span>
         </a>
         <a class="pillar-card" href="aprende.html#adaptacion">
+          <span class="lac lac-card" data-lac="normal" data-lac-on="img" data-lac-hover="curl" aria-hidden="true"></span>
           <img class="pillar-photo" src="assets/photos/adaptacion-800.webp" srcset="assets/photos/adaptacion-800.webp 800w, assets/photos/adaptacion-1600.webp 1600w" sizes="(min-width: 720px) 50vw, 100vw" width="800" height="450" alt="" loading="lazy" decoding="async">
           <span class="pillar-num">02</span>
           <h3>Adaptación</h3>
@@ -120,6 +127,7 @@
           <span class="pillar-count">1 ficha</span>
         </a>
         <a class="pillar-card" href="aprende.html#fatiga">
+          <span class="lac lac-card" data-lac="normal" data-lac-on="img" data-lac-hover="bosteza" aria-hidden="true"></span>
           <img class="pillar-photo" src="assets/photos/fatiga-800.webp" srcset="assets/photos/fatiga-800.webp 800w, assets/photos/fatiga-1600.webp 1600w" sizes="(min-width: 720px) 50vw, 100vw" width="800" height="450" alt="" loading="lazy" decoding="async">
           <span class="pillar-num">03</span>
           <h3>Fatiga y recuperación</h3>
@@ -127,6 +135,7 @@
           <span class="pillar-count">1 ficha</span>
         </a>
         <a class="pillar-card" href="aprende.html#combustible">
+          <span class="lac lac-card" data-lac="normal" data-lac-on="img" data-lac-hover="taza" aria-hidden="true"></span>
           <img class="pillar-photo" src="assets/photos/combustible-800.webp" srcset="assets/photos/combustible-800.webp 800w, assets/photos/combustible-1600.webp 1600w" sizes="(min-width: 720px) 50vw, 100vw" width="800" height="450" alt="" loading="lazy" decoding="async">
           <span class="pillar-num">04</span>
           <h3>Combustible</h3>
@@ -167,6 +176,7 @@
       </div>
       <!-- Formulario «Comunidad Lactac» de Brevo, con el diseño de la web. -->
       <form class="join-form" method="post" action="https://de83f04d.sibforms.com/serve/MUIFANGVhciqbj1fe3E9Mh1OP9P4E4p5TLR9kGx_rdqRFphSxk8FHAoAgDPdAJeH6Q7vlBAPZ5bq5UYARHXiPAccqTpTXoYK5i1GTmYYoGkVT5zRqSYPMTc9cvrrQguqYfqOhBRfIhKQtdNy1sERKqSmfY6Iu5wfGTZQ31tuyYD3XXBSgmXZljEFFW5TCEeRllDNMiZ1lU4rT42mnA==">
+        <button class="lac lac-join" type="button" data-lac="presenta" data-lac-on="top" data-lac-cycle="pulgar,celebra,presenta" aria-label="Lac, la mascota de Lactac"></button>
         <label for="join-email">Tu correo</label>
         <input id="join-email" name="EMAIL" type="email" autocomplete="email" placeholder="tu@correo.com" required>
         <label class="join-consent">
@@ -188,7 +198,7 @@
       <p class="footer-tagline">Entiende, aplica, progresa.</p>
       <p class="footer-ig"><a href="https://www.instagram.com/lactac.es/">Instagram: @lactac.es</a> · <a href="https://www.tiktok.com/@lactac.es">TikTok: @lactac.es</a></p>
       <p>Contenido general y divulgativo. Si tienes una lesión o necesitas una dieta, consulta con un profesional.</p>
-      <p class="footer-updated">Última actualización: 9 de noviembre de 2026.</p>
+      <p class="footer-updated">Última actualización: 12 de noviembre de 2026.</p>
       <p class="footer-credits">
         <a href="aviso-legal.html">Aviso legal</a>
         <a href="privacidad.html">Privacidad y cookies</a>
